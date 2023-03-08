@@ -1,26 +1,26 @@
 import os
+import glob
 from bs4 import BeautifulSoup
 
-# walk through the directory tree and find all .html files
-for root, dirs, files in os.walk("."):
-    for file in files:
-        if file.endswith(".html"):
-            # open the file and read its contents
-            filepath = os.path.join(root, file)
-            with open(filepath, "r",encoding="utf-8") as f:
-                contents = f.read()
+# Get current working directory
+cwd = os.getcwd()
 
-            # parse the HTML using BeautifulSoup
-            soup = BeautifulSoup(contents, "html.parser")
+# Use glob to find all .html files in cwd and its subdirectories
+html_files = glob.glob(cwd + '/**/*.html', recursive=True)
 
-            # find all img tags and modify their attributes
-            for img in soup.find_all("img"):
-                if img.has_attr("data-src"):
-                    if img.has_attr("src"):
-                        del img["src"]
-                    img["src"] = img["data-src"]
-                    del img["data-src"]
-
-            # write the modified contents back to the file
-            with open(filepath, "w",encoding="utf-8") as f:
-                f.write(str(soup))
+# Loop through each HTML file
+for file in html_files:
+    with open(file, 'r',encoding="utf-8") as f:
+        # Read the contents of the file
+        contents = f.read()
+        
+        # Parse the HTML with BeautifulSoup
+        soup = BeautifulSoup(contents, 'html.parser')
+        
+        # Find all <li> tags with the specified class and remove them
+        for li in soup.find_all('li', {'class': 'bg-white border-all border-gray-light padding-xsmall radius-small margin-bottom-small medium-up-padding-horz-large medium-up-padding-vert-medium relative'}):
+            li.decompose()
+        
+        # Write the modified contents back to the file
+        with open(file, 'w',encoding="utf-8") as f2:
+            f2.write(str(soup))
