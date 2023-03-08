@@ -1,0 +1,2211 @@
+<!doctype html>
+<html lang="hi-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v18.3 (Yoast SEO v18.5.1) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>कक्षा केंद्रीय पर DDoS हमला: शमन, एसईओ प्रभाव, और लागत — कक्षा केंद्रीय</title>
+	<meta name="description" content="एक हमलावर ने क्लास सेंट्रल 200M नकली उपयोगकर्ताओं को भेजा, साइट को 36 घंटे के लिए ऑफ़लाइन ले लिया। यहां बताया गया है कि यह कैसे नीचे चला गया।" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs" />
+	<meta property="og:description" content="An attacker sent Class Central 200M fake users, taking the site offline for 36 hours. Here’s how it went down." />
+	<meta property="og:url" content="https://www.classcentral.com/report/class-central-ddos-attack/" />
+	<meta property="og:site_name" content="The Report by Class Central" />
+	<meta property="article:publisher" content="https://www.facebook.com/classcentral" />
+	<meta property="article:published_time" content="2022-11-22T11:51:10+00:00" />
+	<meta property="article:modified_time" content="2022-11-23T22:31:16+00:00" />
+	<meta property="og:image" content="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner.jpg" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="512" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@dhawalhshah" />
+	<meta name="twitter:site" content="@classcentral" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Dhawal Shah" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="9 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.classcentral.com/report/#website","url":"https://www.classcentral.com/report/","name":"The Report by Class Central","description":"MOOC News, Interviews, and Analysis","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.classcentral.com/report/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.classcentral.com/report/class-central-ddos-attack/#primaryimage","inLanguage":"en-US","url":"https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner.jpg","contentUrl":"https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner.jpg","width":1024,"height":512},{"@type":"WebPage","@id":"https://www.classcentral.com/report/class-central-ddos-attack/#webpage","url":"https://www.classcentral.com/report/class-central-ddos-attack/","name":"DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs — Class Central","isPartOf":{"@id":"https://www.classcentral.com/report/#website"},"primaryImageOfPage":{"@id":"https://www.classcentral.com/report/class-central-ddos-attack/#primaryimage"},"datePublished":"2022-11-22T11:51:10+00:00","dateModified":"2022-11-23T22:31:16+00:00","author":{"@id":"https://www.classcentral.com/report/#/schema/person/e922d025b9a3a5844fe50b6960f5325e"},"description":"An attacker sent Class Central 200M fake users, taking the site offline for 36 hours. Here’s how it went down.","breadcrumb":{"@id":"https://www.classcentral.com/report/class-central-ddos-attack/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.classcentral.com/report/class-central-ddos-attack/"]}]},{"@type":"BreadcrumbList","@id":"https://www.classcentral.com/report/class-central-ddos-attack/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"The Report","item":"https://www.classcentral.com/report/"},{"@type":"ListItem","position":2,"name":"Archives","item":"https://www.classcentral.com/report/archives/"},{"@type":"ListItem","position":3,"name":"DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs"}]},{"@type":"Person","@id":"https://www.classcentral.com/report/#/schema/person/e922d025b9a3a5844fe50b6960f5325e","name":"Dhawal Shah","image":{"@type":"ImageObject","@id":"https://www.classcentral.com/report/#personlogo","inLanguage":"en-US","url":"https://www.classcentral.com/report/wp-content/uploads/2020/03/dhawal-shah-150x150.png","contentUrl":"https://www.classcentral.com/report/wp-content/uploads/2020/03/dhawal-shah-150x150.png","caption":"Dhawal Shah"},"description":"Dhawal is the CEO of Class Central, the most popular search engine and review site for online courses and MOOCs. He has completed over a dozen MOOCs and has written over 200 articles about the MOOC space, including contributions to TechCrunch, EdSurge, Quartz, and VentureBeat.","sameAs":["https://www.classcentral.com/","https://twitter.com/dhawalhshah"],"url":"https://www.classcentral.com/report/author/dhawal/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='ppress-frontend-css'  href='https://www.classcentral.com/report/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=3.2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css'  href='https://www.classcentral.com/report/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=3.2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css'  href='https://www.classcentral.com/report/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=5.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.classcentral.com/report/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.classcentral.com/report/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.classcentral.com/report/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=5.8.2' id='ppress-flatpickr-js'></script>
+<script type='text/javascript' src='https://www.classcentral.com/report/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=5.8.2' id='ppress-select2-js'></script>
+<link rel="https://api.w.org/" href="https://www.classcentral.com/report/wp-json/" /><link rel="alternate" type="application/json" href="https://www.classcentral.com/report/wp-json/wp/v2/posts/83561" /><link rel="EditURI" type="application/rsd+xml" title="आरएसडी" href="https://www.classcentral.com/report/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.classcentral.com/report/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8.2" />
+<link rel='shortlink' href='https://www.classcentral.com/report/?p=83561' />
+<link rel="alternate" type="application/json+oembed" href="https://www.classcentral.com/report/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.classcentral.com%2Freport%2Fclass-central-ddos-attack%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.classcentral.com/report/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.classcentral.com%2Freport%2Fclass-central-ddos-attack%2F&#038;format=xml" />
+<!-- Clicky Web Analytics - https://clicky.com, WordPress Plugin by Yoast - https://yoast.com/wordpress/plugins/clicky/ --><script type='text/javascript'>
+	function clicky_gc(name) {
+		var ca = document.cookie.split(';');
+		for (var i in ca) {
+			if (ca[i].indexOf(name + '=') != -1) {
+				return decodeURIComponent(ca[i].split('=')[1]);
+			}
+		}
+		return '';
+	}
+	var username_check = clicky_gc('"comment_author_76c26d9eaf4856686913f7e4e60c9e5a"');
+	if (username_check) var clicky_custom_session = {username: username_check};
+</script>
+<script>
+	
+	var clicky_site_ids = clicky_site_ids || [];
+	clicky_site_ids.push("100717247");
+</script>
+<script async src="https://static.getclicky.com/js"></script>		<style type="text/css" id="wp-custom-css">
+			/*Black Friday Article*/
+.post-73065 .new {
+	color: white;
+	background-color: #42a5f5;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+.post-73065 .expired {
+	color: white;
+	background-color: #000;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+.post-73065 .starts-soon {
+	color: white;
+	background-color: #9ccc65;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+.post-73065 .ends-soon {
+	color: white;
+	background-color: #ef5350;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+
+/*Online Deals Article*/
+.post-84167 .new {
+	color: white;
+	background-color: #42a5f5;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+.post-84167 .expired {
+	color: white;
+	background-color: #000;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+.post-84167 .starts-soon {
+	color: white;
+	background-color: #9ccc65;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+.post-84167 .ends-soon {
+	color: white;
+	background-color: #ef5350;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 6px 6px 4px 6px;
+	margin-right: 4px;
+}
+
+/*Needed for Semrush ad (Q1 2023)*/
+@media only screen and (max-width: 480px) {
+  .post-84883 .xsmall-only-hidden,
+	.post-66895 .xsmall-only-hidden,
+	.post-72028 .xsmall-only-hidden,
+	.post-74324 .xsmall-only-hidden,
+	.post-74608 .xsmall-only-hidden {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .post-84883 .small-up-width-1-2,
+	.post-66895 .small-up-width-1-2,
+	.post-72028 .small-up-width-1-2,
+	.post-74324 .small-up-width-1-2,
+	.post-74608 .small-up-width-1-2 {
+    max-width: 50% !important;
+    min-width: 50% !important;
+    min-height: 1px !important;
+  }
+  .post-84883 .small-up-hidden, 
+	.post-66895 .small-up-hidden, 
+	.post-72028 .small-up-hidden, 
+	.post-74324 .small-up-hidden, 
+	.post-74608 .small-up-hidden {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .post-84883 .medium-up-width-1-3,
+	.post-66895 .medium-up-width-1-3,
+	.post-72028 .medium-up-width-1-3,
+	.post-74324 .medium-up-width-1-3,
+	.post-74608 .medium-up-width-1-3 {
+    max-width: 33.33333% !important;
+    min-width: 33.33333% !important;
+    min-height: 1px !important;
+  }
+}		</style>
+		  <link rel="icon" type="image/x-icon" href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/favicon.ico" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/favicon-16x16.png">
+  <link rel="manifest" href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/site.webmanifest">
+  <link rel="mask-icon" href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/safari-pinned-tab.svg" color="#0d4df1">
+  <meta name="msapplication-TileColor" content="#0d4df1">
+  <meta name="theme-color" content="#0d4df1">
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-27280844-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C254RZPQ1X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C254RZPQ1X');
+    </script>
+  <link href="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/webpack/cc-style.1faac0f8c55193cb997a.css" rel="stylesheet">
+  <style>@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052f,U+1c80-1c88,U+20b4,U+2de0-2dff,U+a640-a69f,U+fe2e-fe2f}@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-cyrillic-ext.woff2) format("woff2");unicode-range:U+0400-045f,U+0490-0491,U+04b0-04b1,U+2116}@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-greek-ext.woff2) format("woff2");unicode-range:U+1f??}@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-greek.woff2) format("woff2");unicode-range:U+0370-03ff}@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01a0-01a1,U+01af-01b0,U+1ea0-1ef9,U+20ab}@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-latin-ext.woff2) format("woff2");unicode-range:U+0100-024f,U+0259,U+1e??,U+2020,U+20a0-20ab,U+20ad-20cf,U+2113,U+2c60-2c7f,U+a720-a7ff}@font-face{font-family:Source Sans Pro;font-style:italic;font-weight:400;font-display:swap;src:local("Source Sans Pro Italic"),local("SourceSansPro-Italic"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-italic-latin.woff2) format("woff2");unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052f,U+1c80-1c88,U+20b4,U+2de0-2dff,U+a640-a69f,U+fe2e-fe2f}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-cyrillic.woff2) format("woff2");unicode-range:U+0400-045f,U+0490-0491,U+04b0-04b1,U+2116}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-greek-ext.woff2) format("woff2");unicode-range:U+1f??}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-greek.woff2) format("woff2");unicode-range:U+0370-03ff}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01a0-01a1,U+01af-01b0,U+1ea0-1ef9,U+20ab}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-latin-ext.woff2) format("woff2");unicode-range:U+0100-024f,U+0259,U+1e??,U+2020,U+20a0-20ab,U+20ad-20cf,U+2113,U+2c60-2c7f,U+a720-a7ff}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:400;font-display:swap;src:local("Source Sans Pro Regular"),local("SourceSansPro-Regular"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-400-regular-latin.woff2) format("woff2");unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052f,U+1c80-1c88,U+20b4,U+2de0-2dff,U+a640-a69f,U+fe2e-fe2f}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-cyrillic.woff2) format("woff2");unicode-range:U+0400-045f,U+0490-0491,U+04b0-04b1,U+2116}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-greek-ext.woff2) format("woff2");unicode-range:U+1f??}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-greek.woff2) format("woff2");unicode-range:U+0370-03ff}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01a0-01a1,U+01af-01b0,U+1ea0-1ef9,U+20ab}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-latin-ext.woff2) format("woff2");unicode-range:U+0100-024f,U+0259,U+1e??,U+2020,U+20a0-20ab,U+20ad-20cf,U+2113,U+2c60-2c7f,U+a720-a7ff}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:600;font-display:swap;src:local("Source Sans Pro SemiBold"),local("SourceSansPro-SemiBold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-600-semibold-latin.woff2) format("woff2");unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-cyrillic-ext.woff2) format("woff2");unicode-range:U+0460-052f,U+1c80-1c88,U+20b4,U+2de0-2dff,U+a640-a69f,U+fe2e-fe2f}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-cyrillic.woff2) format("woff2");unicode-range:U+0400-045f,U+0490-0491,U+04b0-04b1,U+2116}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-greek-ext.woff2) format("woff2");unicode-range:U+1f??}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-greek.woff2) format("woff2");unicode-range:U+0370-03ff}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-vietnamese.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01a0-01a1,U+01af-01b0,U+1ea0-1ef9,U+20ab}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-latin-ext.woff2) format("woff2");unicode-range:U+0100-024f,U+0259,U+1e??,U+2020,U+20a0-20ab,U+20ad-20cf,U+2113,U+2c60-2c7f,U+a720-a7ff}@font-face{font-family:Source Sans Pro;font-style:normal;font-weight:700;font-display:swap;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(../../fonts/source-sans-pro-unhinted/source-sans-pro-700-bold-latin.woff2) format("woff2");unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd}</style>
+</head>
+<body class="post-template-default single single-post postid-83561 single-format-standard class-central-ddos-attack app-data index-data singular-data single-data single-post-data single-post-class-central-ddos-attack-data">
+<section id="news-banner" data-name="NEWS_BANNER" data-detail='{ "cookie": true }'>
+  <div
+    class="news-banner-container relative z-force-top padding-xsmall row vert-align-middle nowrap text-center border-bottom border-gray-light"
+    style="background-color: #0a2540;"
+  >
+ 
+    <div class="fill-space row horz-align-center">
+      <a
+        data-track-ga='{
+          "category": "Promobar",
+          "action": "1700 Coursera Courses Still Fully Free!"
+        }'
+        href="../coursera-free-online-courses/index.html"
+        class="relative hover-no-underline row horz-align-center vert-align-middle"
+        target="_blank"
+      >
+        <h3 class="vert-align-middle row nowrap text-left margin-right-medium text-3 large-up-text-2 color-charcoal">
+                      <img src="https://www.classcentral.com/images/promobar/celebrate.svg" width="30" onerror="this.style.display='none'"/>
+                    <span class="weight-semi text-3 color-white medium-up-text-2 line-tight margin-left-xsmall">1700 Coursera पाठ्यक्रम अभी भी पूरी तरह से नि: शुल्क!</span>
+ </h3>
+        <span class="hidden large-up-inline-block">
+          <span
+            style="top: -1px; border-color: #ffffff; padding: 3px 5px;"
+            class="radius relative border-all weight-bold text-3 color-white medium-up-text-2 padding-horz-medium"
+          >
+            देखें
+          </span>
+        </span>
+      </a>
+ </div>
+    <button
+      aria-label="Close news bar"
+      type="button"
+      data-name="REMOVE_PARENT"
+      data-detail='{ "target": "NEWS_BANNER" }'                    
+      class="horz-align-right radius-circle scale-on-hover transparent bg-gray-light padding-small height-100 icon-xsmall icon-center icon-x-charcoal"
+    >
+      बंद करें    
+    </button>
+ </div>
+</section>
+<div class="content height-100">
+          <header class="width-page width-centered medium-down-padding-horz-medium site-header">
+    <div class="site-header__site-info-row">
+        <div class="site-header__branding">
+            <a href="../index.html">
+                <div class="site-header__site-title">
+                    <span class="icon-lettermark-charcoal site-header__site-title-cc-lettermark"></span>
+                    <span class="symbol-report site-header__site-title-report-symbol">क्लास सेंट्रल द्वारा रिपोर्ट</span>
+ </div>
+            </a>
+            <p class="site-header__site-description">ऑनलाइन शिक्षा में नवीनतम समाचार और रुझानों के लिए आपका स्रोत।</p>
+
+            <button class="site-header__site-menu-button" type="button" aria-label="Menu" data-name="OPEN_NAV">
+                <span class="icon-center icon-medium icon-menu-charcoal"></span>
+            </button>
+
+            <button class="site-header__search-button" type="button" aria-label="Search" data-name="OPEN_SEARCH">
+                <span class="icon-center icon-medium icon-search-charcoal"></span>
+            </button>
+        </div>
+
+        <div class="site-header__search">
+            <form class="search-input" method="GET" action="https://www.classcentral.com/search">
+    <i class="icon-search-charcoal icon-medium search-input__search-icon"></i>
+    <input
+        id="autocomplete-search-1496922557"
+        class="search-input__input is-blank"
+        type="search"
+        autocomplete="off"
+        aria-label="Search"
+        placeholder="कोर्स और बहुत कुछ खोजें..."
+        name="q"
+        data-track-ga=""
+        data-name="AUTOCOMPLETE_SEARCHBOX"
+    >
+    <button class="search-input__clear-button" type="button" aria-label="Clear" aria-controls="autocomplete-search-1496922557" data-name="AUTOCOMPLETE_CLEAR" hidden><i class="icon-x-charcoal icon-xsmall"></i></button>
+</form>
+            <div class="search-results">
+    <div class="search-results__container">
+        <div class="search-results__small-header">
+            <button
+                aria-label="Back"
+                class="search-results__small-header-back"
+                type="button"
+                data-name="MOBILE_AUTOCOMPLETE_EXIT"
+            >
+                <i class="icon-chevron-left-charcoal icon-small"></i>
+            </button>
+
+            <form class="search-input--compact" method="GET" action="https://www.classcentral.com/search">
+    <i class="icon-search-charcoal icon-medium search-input__search-icon"></i>
+    <input
+        id="autocomplete-search-1913632894"
+        class="search-input__input is-blank"
+        type="search"
+        autocomplete="off"
+        aria-label="Search"
+        placeholder="कोर्स और बहुत कुछ खोजें..."
+        name="q"
+        data-track-ga=""
+        data-name="MOBILE_AUTOCOMPLETE_SEARCHBOX"
+    >
+    <button class="search-input__clear-button" type="button" aria-label="Clear" aria-controls="autocomplete-search-1913632894" data-name="AUTOCOMPLETE_CLEAR" hidden><i class="icon-x-charcoal icon-xsmall"></i></button>
+</form>
+        </div>
+
+        <div class="search-results__results js-autocomplete-results" data-src="/suggest/">
+                            
+            <div class="search-results__group js-search-result-featured_articles">
+            
+                        <ol class="list-no-style">
+                                    <li>
+                                                                                                
+                                                                                                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="../google-free-certificates/index.html" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;mooc_report_article&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201c700&#x2B;&#x20;Free&#x20;Google&#x20;Certifications&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-paper-charcoal icon-small"></i>
+                                <div class="search-results__result-info" style="--offset-right: 91px;">
+                                    <p class="search-results__result-name--bold">700+ मुफ्त Google प्रमाणपत्र</p>
+                                                                            <span class="search-results__result-tag"><i class="icon-xsmall icon-megaphone-charcoal"></i> ट्रेंडिंग</span>
+ </div>
+                            </a>
+                                            </li>
+                            </ol>
+        </div>
+                <div class="search-results__group js-search-result-search_term_suggestions" data-template="suggested_search_tokens">
+                                            <h2 class="search-results__group-heading">सबसे आम</h2>
+            
+                        <ol class="list-no-style">
+                                    <li>
+                                                                                                
+                                                                                                                                    
+                        
+                                                    <button
+                                class="search-results__result js-autocomplete-result"
+                                data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;suggested_search_term&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cexcel&#x5C;u201d&quot;&#x7D;"
+                                type="button"
+                                data-name="SUGGESTED_SEARCH_TERM"
+                                data-detail="&#x7B;&quot;term&quot;&#x3A;&quot;excel&quot;&#x7D;"
+                            >
+                                <i class="search-results__result-icon icon-search-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <span class="search-results__result-name">उत्कृष्ट</span>
+ </div>
+                            </button>
+                                            </li>
+                                    <li>
+                                                                                                
+                                                                                                                                    
+                        
+                                                    <button
+                                class="search-results__result js-autocomplete-result"
+                                data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;suggested_search_term&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201csql&#x5C;u201d&quot;&#x7D;"
+                                type="button"
+                                data-name="SUGGESTED_SEARCH_TERM"
+                                data-detail="&#x7B;&quot;term&quot;&#x3A;&quot;sql&quot;&#x7D;"
+                            >
+                                <i class="search-results__result-icon icon-search-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <span class="search-results__result-name">एसक्यूएल</span>
+ </div>
+                            </button>
+                                            </li>
+                                    <li>
+                                                                                                
+                                                                                                                                    
+                        
+                                                    <button
+                                class="search-results__result js-autocomplete-result"
+                                data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;suggested_search_term&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cweb&#x20;development&#x5C;u201d&quot;&#x7D;"
+                                type="button"
+                                data-name="SUGGESTED_SEARCH_TERM"
+                                data-detail="&#x7B;&quot;term&quot;&#x3A;&quot;web&#x20;development&quot;&#x7D;"
+                            >
+                                <i class="search-results__result-icon icon-search-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <span class="search-results__result-name">वेब विकास</span>
+ </div>
+                            </button>
+                                            </li>
+                            </ol>
+        </div>
+                <div class="search-results__group js-search-result-popular_subjects">
+                                            <h2 class="search-results__group-heading">लोकप्रिय विषय</h2>
+            
+                        <ol class="list-no-style">
+                                    <li>
+                                                                                                
+                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="https://www.classcentral.com/subject/web-development" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;subject&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cWeb&#x20;Development&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-subject-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <p class="search-results__result-name">वेब स्थल विकासName</p>
+                                                                            <span class="search-results__result-extra">4,469 पाठ्यक्रम</span>
+ </div>
+                            </a>
+                                            </li>
+                                    <li>
+                                                                                                
+                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="../../subject/cs" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;subject&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cComputer&#x20;Science&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-subject-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <p class="search-results__result-name">कंप्यूटर विज्ञान</p>
+                                                                            <span class="search-results__result-extra">9,221 पाठ्यक्रम</span>
+ </div>
+                            </a>
+                                            </li>
+                                    <li>
+                                                                                                
+                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="https://www.classcentral.com/subject/business" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;subject&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cBusiness&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-subject-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <p class="search-results__result-name">व्यापार </p>
+                                                                            <span class="search-results__result-extra">19,599 पाठ्यक्रम</span>
+ </div>
+                            </a>
+                                            </li>
+                            </ol>
+        </div>
+                <div class="search-results__group js-search-result-popular_courses">
+                                            <h2 class="search-results__group-heading">लोकप्रिय पाठ्यक्रम</h2>
+            
+                        <ol class="list-no-style">
+                                    <li>
+                                                                                                
+                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="https://www.classcentral.com/course/teaching-young-learners-online-20139" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;course&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cTeaching&#x20;Young&#x20;Learners&#x20;Online&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-course-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <p class="search-results__result-name">युवा शिक्षार्थियों को ऑनलाइन पढ़ाना</p>
+                                                                                                                        <span class="search-results__result-extra">ब्रिटिश काउंसिल</span>
+ </div>
+                            </a>
+                                            </li>
+                                    <li>
+                                                                                                
+                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="https://www.classcentral.com/course/modernmiddleeast1-976" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;course&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cThe&#x20;Emergence&#x20;of&#x20;the&#x20;Modern&#x20;Middle&#x20;East&#x20;-&#x20;Part&#x20;I&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-course-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <p class="search-results__result-name">आधुनिक मध्य पूर्व का उद्भव - भाग I</p>|||UNTRANSLATED_CONTENT_START|||
+                                                                                                                        <span class="search-results__result-extra">Tel Aviv University</span>
+                                                                                                            |||UNTRANSLATED_CONTENT_END|||</div>
+                            </a>
+                                            </li>
+                                    <li>
+                                                                                                
+                        
+                        
+                                                    <a class="search-results__result js-autocomplete-result" href="https://www.classcentral.com/course/kadenze-machine-learning-for-musicians-and-artists-3768" data-track-ga="&#x7B;&quot;category&quot;&#x3A;&quot;autocomplete&#x20;empty&#x20;state&quot;,&quot;action&quot;&#x3A;&quot;course&quot;,&quot;label&quot;&#x3A;&quot;Entry&#x3A;&#x20;&#x5C;u201cMachine&#x20;Learning&#x20;for&#x20;Musicians&#x20;and&#x20;Artists&#x5C;u201d&quot;&#x7D;">
+                                <i class="search-results__result-icon icon-course-charcoal icon-small"></i>
+                                <div class="search-results__result-info">
+                                    <p class="search-results__result-name">संगीतकारों और कलाकारों के लिए मशीन लर्निंग</p>
+                                                                                                                        <span class="search-results__result-extra">गोल्डस्मिथ लंदन विश्वविद्यालय</span>
+ </div>
+                            </a>
+                                            </li>
+                            </ol>
+        </div>
+    
+                    </div>
+    </div>
+    <div
+        class="search-results__blanket"
+        data-name="AUTOCOMPLETE_BLANKET"
+    ></div>
+</div>
+        </div>
+
+        
+    </div>
+
+    <div class="site-header__navigation-row">
+        <div class="site-header__navigation-header">
+            <h2 class="site-header__navigation-header-brand icon-lettermark-charcoal">क्लास सेंट्रल</h2>
+        
+            <button aria-label="Close Site Menu" data-name="CLOSE_NAV" class="site-header__navigation-header-close-button">
+                <i class="icon-x-charcoal site-header__navigation-header-close-button-icon"></i>
+            </button>
+        </div>
+
+        <div class="site-header__navigation-external">
+            <span class="site-header__navigation-section-header">क्लास सेंट्रल</span>
+ <div class="relative" data-name="NAV_SUBMENU">
+                                <button class="site-header__external-menu-button site-header__element--only-large" type="button" aria-haspopup="true" aria-controls="nested-menu-items-external" aria-expanded="false" aria-label="Elsewhere on Class Central" data-name="NAV_SUBMENU_TRIGGER">
+                    <span class="icon-center icon-medium icon-menu-charcoal"></span>
+                </button>
+                <ol id="nested-menu-items-external" class="site-header__navigation-list site-header__external-submenu js-submenu-items">
+                                            
+                                                    <li class="site-header__navigation-item--highlighted">
+                                <a
+                                    href="../../index.html"
+                                    target="_blank"
+                                    class="site-header__navigation-action--highlighted"
+                                >classcentral.com</a>
+ </li>
+                                                                    
+                                                    <li class="site-header__navigation-item"><a
+                                    href="../../subjects"
+                                    target="_blank"
+                                    class="site-header__navigation-action"
+                                >कोर्स ब्राउज़ करें</a>
+
+ </li>
+                                                                    
+                                                    <li class="site-header__navigation-item">
+                                <a
+                                    href="https://www.classcentral.com/search"
+                                    target="_blank"
+                                    class="site-header__navigation-action"
+                                >खोजें</a>
+ </li>
+                                                                    
+                                                    <li class="site-header__navigation-item">|||UNTRANSLATED_CONTENT_START|||
+                                <a
+                                    href="https://www.classcentral.com/write-a-review"
+                                    target="_blank"
+                                    class="site-header__navigation-action"
+                                >Write a Review</a>
+                            |||UNTRANSLATED_CONTENT_END|||</li>
+                                                                    
+                                                    <li class="site-header__navigation-item">|||UNTRANSLATED_CONTENT_START|||
+                                <a
+                                    href="../../about"
+                                    target="_blank"
+                                    class="site-header__navigation-action"
+                                >About Class Central</a>
+                            |||UNTRANSLATED_CONTENT_END|||</li>
+                                                            </ol>
+            </div>
+        </div>
+
+        <div class="site-header__navigation-internal">
+            <span class="symbol-report site-header__navigation-section-header--symbol"></span>
+            <ol class="site-header__navigation-list">
+                                                                                        <li class="site-header__navigation-item">
+                                <a class="site-header__navigation-action" href="https://www.classcentral.com/report/category/mooc-news/">समाचार</a>
+ </li>
+                                                                                                                                    <li class="site-header__navigation-item">
+                                <a class="site-header__navigation-action" href="https://www.classcentral.com/report/category/analysis/">विश्लेषण</a>
+ </li>
+                                                                                                                                    <li class="site-header__navigation-item"><a class="site-header__navigation-action" href="https://www.classcentral.com/report/category/features/">विशेषताएं</a>: </li>
+                                                                                                                                    <li class="site-header__navigation-item">
+                                <a class="site-header__navigation-action" href="https://www.classcentral.com/report/category/guides/">मार्गदर्शिकाएँ</a>
+ </li>
+                                                                                                                                    <li class="site-header__navigation-item">
+                                <a class="site-header__navigation-action" href="https://www.classcentral.com/report/category/student-voices/">छात्र आवाज़ें</a>
+ </li>
+                                                                                                                                    
+                            <li class="site-header__navigation-item site-header__element--only-large" data-name="NAV_SUBMENU">
+                                <button class="site-header__navigation-action" type="button" aria-haspopup="true" aria-controls="nested-menu-items-67849" aria-expanded="false" data-name="NAV_SUBMENU_TRIGGER">
+                                    रैंकिंग
+                                    <span class="icon-chevron-down-charcoal site-header__navigation-action-icon"></span>
+                                </button>
+ <ol class="site-header__navigation-submenu js-submenu-items" id="nested-menu-items-67849">
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="../../collection/top-free-online-courses">सभी समय के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="../best-free-online-courses-2022/index.html">2022 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="../best-free-online-courses-2021/index.html">2021 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/top-moocs-2020-edition/">2020 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/best-free-online-courses-2019/">2019 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/best-free-online-courses-2018/">2018 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/best-free-online-courses-2017/">2017 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/best-free-online-courses-2016/">2016 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                            <li><a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/best-free-online-courses-2015/">2015 के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                                                                    </ol>
+                            </li>
+                                                                                                                                    
+                            <li class="site-header__navigation-item site-header__element--only-large" data-name="NAV_SUBMENU"><button class="site-header__navigation-action" type="button" aria-haspopup="true" aria-controls="nested-menu-items-67766" aria-expanded="false" data-name="NAV_SUBMENU_TRIGGER">समीक्षाधीन वर्ष
+                                    
+                                    <span class="icon-chevron-down-charcoal site-header__navigation-action-icon"></span>
+                                </button>
+
+ <ol class="site-header__navigation-submenu js-submenu-items" id="nested-menu-items-67766">
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2021/">एमओओसी राउंडअप 2021</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2020/">MOOC राउंडअप 2020</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2019/">MOOC राउंडअप 2019</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2018/">एमओओसी राउंडअप 2018</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2017/">एमओओसी राउंडअप 2017</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2016/">एमओओसी राउंडअप 2016</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/mooc-roundup-2015/">एमओओसी राउंडअप 2015</a>
+ </li>
+                                                                    </ol>
+                            </li>
+                                                                                                                                    
+                            <li class="site-header__navigation-item site-header__element--only-large" data-name="NAV_SUBMENU">
+                                <button class="site-header__navigation-action" type="button" aria-haspopup="true" aria-controls="nested-menu-items-67772" aria-expanded="false" data-name="NAV_SUBMENU_TRIGGER">
+                                    प्रदाता
+                                    <span class="icon-chevron-down-charcoal site-header__navigation-action-icon"></span>
+                                </button>
+ <ol class="site-header__navigation-submenu js-submenu-items" id="nested-menu-items-67772">
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/coursera/">Coursera</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/edx/">एडएक्स</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/udacity/">Udacity</a>
+ </li>
+                                                                            <li>
+                                            <a class="site-header__navigation-submenu-action" href="https://www.classcentral.com/report/tag/futurelearn/">Futurelearn</a>
+ </li>
+                                                                    </ol>
+                            </li>
+                                                                        </ol>
+        </div>
+    </div>
+</header>
+               <div style="color: #515870;" class="max-950 width-centered text-left large-down-padding-horz-medium border-box text-2 line-tight margin-vert-large">
+          <p><strong>प्रकटीकरण:</strong> कक्षा केंद्रीय शिक्षार्थी समर्थित है। जब आप हमारी साइट पर लिंक के माध्यम से खरीदते हैं, तो हम एक संबद्ध कमीशन कमा सकते हैं।</p>
+
+      </div>
+
+<article class="large-down-padding-horz-medium post-83561 post type-post status-publish format-standard has-post-thumbnail hentry category-mooc-news">
+  <header class="max-950 border-box width-centered text-left border-bottom border-gray-mid margin-bottom-large padding-bottom-medium">
+    <a href="https://www.classcentral.com/report/category/mooc-news/" class="block weight-bold upper color-blue text-2">समाचार</a>
+ <h1 class="head-1 margin-bottom-xsmall width-centered">कक्षा केंद्रीय पर DDoS हमला: शमन, एसईओ प्रभाव, और लागत</h1>
+    <div class="head-3 weight-light line-wide margin-bottom-large" style="color: #515870;">
+      <p>एक हमलावर ने क्लास सेंट्रल 200M नकली उपयोगकर्ताओं को भेजा, साइट को 36 घंटे के लिए ऑफ़लाइन ले लिया। यहां बताया गया है कि यह कैसे नीचे चला गया।</p>
+
+    </div>
+    <div class="row medium-up-nowrap vert-align-middle">
+      <div class=" medium-up-inline-block  medium-up-text-1 overflow-hidden small-down-width-100 block">
+        <div class="row nowrap text-2 vert-align-middle">
+              <div class="margin-right-xsmall">
+          <img
+            alt="धवल शाह प्रोफ़ाइल फ़ोटो"
+            width="45"
+            height="45"
+            src="https://www.classcentral.com/report/wp-content/uploads/2020/03/dhawal-shah-150x150.png"
+            class="radius-circle fit block"
+          >
+        </div>
+        <div>
+          <a
+            href="../author/dhawal/index.html"
+            class="text-1 color-charcoal weight-semi block line-tight"
+          >
+            धवल शाह
+          </a>
+ <time
+            class="text-3 block color-charcoal line-tight"
+            datetime="2022-11-22T11:51:10+00:00"
+          >22 नवंबर, 2022
+
+ </time>
+        </div>
+          
+    </div>
+        </div>
+      <div class="small-down-margin-top-xsmall medium-up-horz-align-right border-box medium-up-padding-horz-medium">
+        <ul class="row vert-align-middle list-no-style">
+  <li>
+                            <a
+      rel="noopener"
+      target="_blank"
+      href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.classcentral.com%2Freport%2Fclass-central-ddos-attack%2F&amp;t=DDoS%20Attack%20on%20Class%20Central%3A%20Mitigation%2C%20SEO%20Impact%2C%20and%20Costs&amp;s=100&amp;p[url]=https%3A%2F%2Fwww.classcentral.com%2Freport%2Fclass-central-ddos-attack%2F&amp;p[images][0]=https%3A%2F%2Fwww.classcentral.com%2Freport%2Fwp-content%2Fuploads%2F2022%2F11%2Fattack-on-cc-banner.jpg&amp;p[title]=DDoS%20Attack%20on%20Class%20Central%3A%20Mitigation%2C%20SEO%20Impact%2C%20and%20Costs"
+      class="hover-transparent-high icon-facebook-outline-charcoal inline-block icon-center icon-medium padding-horz-xxsmall hover-transparent"
+    >Facebook</a>
+ </li>
+  <li class="margin-left-xxsmall">
+                            <a
+      rel="noopener"
+      href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.classcentral.com%2Freport%2Fclass-central-ddos-attack%2F&amp;text=DDoS%20Attack%20on%20Class%20Central%3A%20Mitigation%2C%20SEO%20Impact%2C%20and%20Costs"
+      target="_blank"
+      class="hover-transparent-high icon-twitter-outline-charcoal inline-block icon-center icon-medium padding-horz-xxsmall hover-transparent"
+    >Twitter</a>
+ </li>
+  <li class="margin-left-xxsmall">
+    <a href="../../cdn-cgi/l/email-protection#83bcf0f6e1e9e6e0f7bec7c7ecd0a6b1b3c2f7f7e2e0e8a6b1b3eceda6b1b3c0efe2f0f0a6b1b3c0e6edf7f1e2efa6b0c2a6b1b3ceeaf7eae4e2f7eaeceda6b1c0a6b1b3d0c6cca6b1b3caeef3e2e0f7a6b1c0a6b1b3e2ede7a6b1b3c0ecf0f7f0a5e2eef3b8e1ece7fabecbe6faa6b1b3e0ebe6e0e8a6b1b3f7ebeaf0a6b1b3ecf6f7b9a6b1b3ebf7f7f3f0a6b0c2a6b1c5a6b1c5f4f4f4ade0efe2f0f0e0e6edf7f1e2efade0eceea6b1c5f1e6f3ecf1f7a6b1c5e0efe2f0f0aee0e6edf7f1e2efaee7e7ecf0aee2f7f7e2e0e8a6b1c5" class="hover-transparent-high icon-envelope-charcoal inline-block icon-center icon-medium padding-horz-xxsmall hover-transparent">
+      लिफाफा
+    </a>
+ </li>
+  <li class="margin-left-xxsmall relative">
+    <button
+        data-name="COPY"
+        data-detail='{ "url": "https://www.classcentral.com/report/class-central-ddos-attack/" }'
+        class="hover-transparent-high inline-block icon-center icon-medium padding-horz-xxsmall icon-link-charcoal"
+      >
+      Url
+    </button>
+    <span class="absolute top" style="left: -14px;" data-template="social-copy-link"></span>
+ </li>
+  <li class="margin-left-xxsmall">
+    <a
+      data-name="SCROLL_TO"
+      data-detail='{ "node": "#commentSection", "offset": "-100" }'
+      href="index.html#commentSection"
+      class="row hover-transparent-high hover-no-underline vert-align-middle padding-horz-xxsmall"
+    >
+      <i class="icon-comment-charcoal icon-medium icon-center relative" style="top: 1px;"></i>
+      <span class="color-charcoal margin-left-xxsmall">8</span>
+    </a>
+ </li>
+</ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-950 border-box width-centered xlarge-up-padding-left-xxlarge">
+    <section class="row large-up-nowrap margin-bottom-small relative">
+      <div class="width-100 large-up-width-11-16">
+        <div class="wysiwyg text-1">
+          <p><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner.jpg"><img loading="lazy" class="alignnone size-full wp-image-83573" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner.jpg" alt="" width="1024" height="512" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner.jpg 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner-300x150.jpg 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-on-cc-banner-768x384.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p><span style="font-weight: 400;">मैंने एक </span><i><span style="font-weight: 400;">गड़गड़ाहट</span></i> सुनी<span style="font-weight: 400;"> —  यह मेरा फोन पागलपन से गूंज रहा था: कॉल, संदेश, सुस्त सूचनाएं। <a href="../../index.html">क्लास सेंट्रल</a> की वेबसाइट नीचे दी गई थी। इसे लाखों हिट मिल रहे थे, जिससे यह सभी के लिए अनुपयोगी हो गया।</span></p>
+<p><span style="font-weight: 400;">बाद में, हमें पता चला कि यह एक </span><a href="https://www.cloudflare.com/learning/ddos/ransom-ddos-attack/"><span style="font-weight: 400;">फिरौती डीडीओएस</span></a> हमला था<span style="font-weight: 400;">, और कम से कम एक ऑनलाइन कोर्स प्रदाता (<a href="../index.html">रिपोर्ट</a> के नियमित पाठकों के बारे में पता चलेगा) पर भी हमला किया गया था। हमलावर ने &quot;सभी समस्याओं के समाधान के लिए फ़ाइल&quot; के लिए बिटकॉइन में $ 5,000 की मांग की।</span></p>
+<p><span style="font-weight: 400;">समय इससे बदतर नहीं हो सकता था। मैं MOOCs </span>सम्मेलन के<a href="https://lwmoocs-conference.org/lwmoocs2022/"> साथ सीखने के लिए ग्वाटेमाला में था।<span style="font-weight: 400;"></span></a><span style="font-weight: 400;"> मैंने अभी एक मुख्य वक्ता (<a href="https://docs.google.com/presentation/d/1KBZHkEsvaPADbUMMFGpMCg1Ux8JpxFbtWmAjbv_3T2Y/view"><span style="font-weight: 400;">स्लाइड्स</span></a>) दिया</span><span style="font-weight: 400;"> था और कुछ घंटों बाद एक पैनल में भाग लेने के लिए निर्धारित किया गया था। और हमारे सबसे वरिष्ठ इंजीनियर सप्ताह के लिए अपने गृहनगर और बंद करने के रास्ते पर थे।</span></p>
+<p><a href="../../index.html"><span style="font-weight: 400;">क्लास सेंट्रल</span></a><span style="font-weight: 400;"> 36 घंटे के लिए नीचे था क्योंकि हमने इसे वापस लाने के लिए काम किया था। हमलावर हमारे हर कदम को देख रहा था और इसका जवाब दे रहा था, यहां तक कि हमें संदेश भी भेज रहा था कि हमारे प्रयास व्यर्थ थे।</span></p>
+<p><span style="font-weight: 400;">यह कहानी है कि हमने हमले को कैसे कम किया, क्या काम किया और काम नहीं किया, एसईओ प्रभाव (लघु और दीर्घकालिक), साथ ही साथ हमें कितना खर्च हुआ।</span></p>
+<h2><span style="font-weight: 400;">हमला: कैसे और क्यों</span></h2>
+<figure id="attachment_83564" aria-describedby="caption-attachment-83564" style="width: 1617px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining.png"><img loading="lazy" class="size-full wp-image-83564" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining.png" alt="" width="1617" height="911" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining.png 1617w, https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining-300x169.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining-1024x577.png 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining-768x433.png 768w, https://www.classcentral.com/report/wp-content/uploads/2022/11/cc-attack-flatlining-1536x865.png 1536w" sizes="(max-width: 1617px) 100vw, 1617px" /></a><figcaption id="caption-attachment-83564" class="wp-caption-text">हमले के परिणामस्वरूप क्लास सेंट्रल मेट्रिक्स स्पाइकिंग या फ्लैटलाइनिंग</figcaption></figure>
+<p><span style="font-weight: 400;">जैसे ही साइट नीचे चली गई, हमने तुरंत सुराग की तलाश शुरू कर दी। हमने हाल ही में कुछ बुनियादी ढांचे में सुधार किया था, इसलिए हमारा पहला विचार यह था कि हमने एक सेटिंग को गड़बड़ कर दिया होगा।</span></p>
+<p><span style="font-weight: 400;">लेकिन लॉग को देखने के बाद, यह स्पष्ट हो गया कि हम भारी हमले में थे, जिसके पैमाने को हम केवल क्लाउडफ्लेयर पर स्विच करने के बाद महसूस करेंगे।</span></p>
+<p><span style="font-weight: 400;">हमला एक &quot;फिरौती </span><a href="https://en.wikipedia.org/wiki/Denial-of-service_attack"><span style="font-weight: 400;">DDoS हमला</span></a><span style="font-weight: 400;">&quot; है। सीधे शब्दों में कहें, तो लाखों बॉट हर घंटे क्लास सेंट्रल होमपेज पर जाने लगे। हमारे सर्वर वास्तविक मनुष्यों और बॉट्स के बीच अंतर नहीं कर सके, और हम केवल एक समय में उपयोगकर्ताओं की एक निश्चित संख्या की सेवा कर सकते हैं।</span></p>
+<p><span style="font-weight: 400;">नतीजतन, हम वास्तविक लोगों को दूर कर रहे थे, क्योंकि हम बॉट्स की सेवा में व्यस्त थे। व्यावहारिक रूप से बोलते हुए, साइट सभी के लिए अनुपयोगी थी। अधिक जानने के लिए, Cloudflare में<a href="https://www.cloudflare.com/learning/ddos/ransom-ddos-attack/"><span style="font-weight: 400;"> इस विषय पर कुछ बेहतरीन</span></a> व्याख्याकार </span><span style="font-weight: 400;">हैं।</span></p>
+<figure id="attachment_83565" aria-describedby="caption-attachment-83565" style="width: 2322px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack.png"><img loading="lazy" class="wp-image-83565 size-full" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack.png" alt="" width="2322" height="688" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack.png 2322w, https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack-300x89.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack-1024x303.png 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack-768x228.png 768w, https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack-1536x455.png 1536w, https://www.classcentral.com/report/wp-content/uploads/2022/11/ransom-ddos-attack-2048x607.png 2048w" sizes="(max-width: 2322px) 100vw, 2322px" /></a><figcaption id="caption-attachment-83565" class="wp-caption-text"><span style="font-weight: 400;">DDoS हमले का चित्रण (स्रोत: </span><a href="https://www.cloudflare.com/learning/ddos/ransom-ddos-attack/"><span style="font-weight: 400;">Cloudflare</span></a><span style="font-weight: 400;">)</span></figcaption></figure>
+<p><span style="font-weight: 400;">कुछ घंटों बाद, हमें एहसास हुआ कि हमें क्यों निशाना बनाया जा रहा है। हमलावर जो जॉन एवी जुनैद (ट्विटर हैंडल<a href="https://twitter.com/Evie24435208"><span style="font-weight: 400;">@ Evie24435208)</span></a> द्वारा गया </span><span style="font-weight: 400;"> था, उसने मुझे अपने व्यक्तिगत ट्विटर, क्लास सेंट्रल के ट्विटर, साथ ही साथ हमारे संपर्क ईमेल पर संदेश दिया था। यहाँ संदेश है:</span></p>
+<p><span style="font-weight: 400;">व्यक्ति<a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm.png"><img loading="lazy" class="alignnone size-full wp-image-83566" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm.png" alt="" width="836" height="871" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm.png 836w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-288x300.png 288w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-768x800.png 768w" sizes="(max-width: 836px) 100vw, 836px" /></a><br />
+ने संकेत दिया कि उन्होंने &quot;एसक्यूएल इंजेक्शन भेद्यता&quot; की पहचान की है और इसका इस्तेमाल &quot;अपाचे क्रैश&quot; करने के लिए किया है। यह एक स्पष्ट झूठ था। लॉग स्पष्ट थे: यह एक डीडीओएस हमला था। इसके अलावा, क्लास सेंट्रल<i><span style="font-weight: 400;"> अपाचे </span></i> </span><span style="font-weight: 400;">वेब सर्वर का उपयोग नहीं करता है।</span></p>
+<p><span style="font-weight: 400;">लेकिन मैं कल्पना कर सकता हूं कि कम तकनीकी संसाधनों वाली छोटी साइटें इसके लिए गिर सकती हैं। जैसा कि हमलावर ने उल्लेख किया था, असली खतरा &quot;आपकी साइट को महीनों तक बंद रखना&quot; था।  यहां तक कि अगर आप $ 5,000 का भुगतान करते हैं, तो कोई कारण नहीं है कि हमलावर बंद हो जाएगा या बाद में फिर से ऐसा नहीं करेगा।</span></p>
+<p><span style="font-weight: 400;">18 घंटे बाद, मुझे हमलावर से एक और संदेश मिला।</span></p>
+<p><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-2.png"><img loading="lazy" class="alignnone size-full wp-image-83567" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-2.png" alt="" width="836" height="591" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-2.png 836w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-2-300x212.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attacker-tweet-dm-2-768x543.png 768w" sizes="(max-width: 836px) 100vw, 836px" /></a></p>
+<p><span style="font-weight: 400;">हमलावर ने देखा कि हमने क्लाउडफ्लेयर (उस पर बाद में) पर स्विच किया था और अपनी मूल स्क्रिप्ट पर चिपक गया था, कह रहा था कि यह एक &quot;सॉफ्टवेयर समस्या&quot; थी। लेकिन यहां, उन्होंने एक और खतरा बताया: कि हम &quot;Google रैंकिंग खो सकते हैं।</span></p>
+<p><span style="font-weight: 400;">यह वास्तव में हमारे साथ पहले हुआ था। पिछले साल, हमने अपना आधा ट्रैफ़िक खो दिया था जब Google ने अपने खोज एल्गोरिदम को ट्विक किया था। डेढ़ साल बाद, हम अभी भी पूरी तरह से ठीक नहीं हुए हैं। इस साल की शुरुआत में, जब 2 यू स्टॉक की कीमत आधे से गिर गई, तो मैंने अनुमान लगाया कि </span><a href="https://www.classcentral.com/report/2u-stock-drop/"><span style="font-weight: 400;">Google का एल्गोरिदम परिवर्तन आंशिक रूप से जिम्मेदार हो सकता</span></a><span style="font-weight: 400;"> है।</span></p>
+<p><span style="font-weight: 400;">मैंने </span>Coursera, MasterClass और edX जैसे शीर्ष प्लेटफार्मों की<a href="https://www.classcentral.com/report/seo-content-strategy/"><span style="font-weight: 400;"> एसईओ सामग्री रणनीति</span></a> के बारे में भी लिखा<span style="font-weight: 400;"> है। यहां तक कि अगर हमलावर ने स्पष्ट रूप से इसका उल्लेख नहीं किया था, तो यह जोखिम पहले से ही मेरे दिमाग में था। यदि आप नीचे स्क्रॉल करते हैं, तो आप पाएंगे कि हमले ने हमारे एसईओ को कैसे प्रभावित किया।</span></p>
+<h2><span style="font-weight: 400;">DDoS शमन</span></h2>
+<figure id="attachment_83568" aria-describedby="caption-attachment-83568" style="width: 1536px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/maintenance-page-during-attack.png"><img loading="lazy" class="wp-image-83568 size-full" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/maintenance-page-during-attack.png" alt="" width="1536" height="776" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/maintenance-page-during-attack.png 1536w, https://www.classcentral.com/report/wp-content/uploads/2022/11/maintenance-page-during-attack-300x152.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/maintenance-page-during-attack-1024x517.png 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/maintenance-page-during-attack-768x388.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></a><figcaption id="caption-attachment-83568" class="wp-caption-text">हमले के दौरान हमने जो रखरखाव पृष्ठ दिखाया था</figcaption></figure>
+<p>एक <span style="font-weight: 400;">बार जब हमें पता चला कि यह एक डीडीओएस हमला था, तो हमने जो पहली चीजें की थीं, उनमें से एक हमले में एक पैटर्न खोजने की कोशिश कर रहा था — उदाहरण के लिए, </span><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent"><span style="font-weight: 400;">उपयोगकर्ता एजेंट</span></a> <span style="font-weight: 400;">या आईपी पते में कुछ — वास्तविक उपयोगकर्ताओं को बॉट्स से अलग करने और फ़िल्टर करने का प्रयास करने के लिए हमलावरों।</span></p>
+<p><span style="font-weight: 400;">लेकिन हमें जल्द ही एहसास हुआ कि यह हमला अधिक परिष्कृत था और विभिन्न प्रकार के आईपी पते का उपयोग किया गया था।</span></p>
+<p><span style="font-weight: 400;">हमने नोट किया कि हमलावर हमारे होमपेज पर सभी ट्रैफ़िक भेज रहा था। </span><span style="font-weight: 400;">इसलिए हमने मुखपृष्ठ पर एक रखरखाव पृष्ठ दिखाना शुरू कर दिया, और इसने हमें बाकी साइट को लाने की अनुमति दी।</span></p>
+<p><span style="font-weight: 400;">हमने कोशिश की एक और चाल होमपेज को किसी अन्य URL पर क्लोन कर रही थी और जावास्क्रिप्ट का उपयोग करके रखरखाव पृष्ठ से क्लोन होमपेज पर वास्तविक ट्रैफ़िक को पुनर्निर्देशित करने के लिए किया था। </span><span style="font-weight: 400;">असल में, बॉट रखरखाव पृष्ठ देखेंगे, लेकिन वास्तविक उपयोगकर्ता केवल वैकल्पिक मुखपृष्ठ पर पुनर्निर्देशित होने से पहले रखरखाव पृष्ठ को संक्षेप में देखेंगे।</span></p>
+<p><span style="font-weight: 400;">लेकिन जल्द ही, हमलावर को एहसास हुआ कि क्या हो रहा था और अन्य पृष्ठों पर भी हमला करना शुरू कर दिया। तभी हमें एहसास हुआ कि हमें जानबूझकर निशाना बनाया जा रहा है। हमने अभी तक ट्विटर/ईमेल संदेशों को नहीं देखा है।</span></p>
+<p><span style="font-weight: 400;">जैसा कि मैंने पहले उल्लेख किया था, उस समय, मैं एक सम्मेलन के लिए ग्वाटेमाला में था और अपने सहयोगी </span><a href="https://www.classcentral.com/@suparn"><span style="font-weight: 400;">@</span></a> suparn के साथ दूरस्थ रूप से काम कर रहा<span style="font-weight: 400;"> था, जो भारत में था। यह सब भारत में लगभग 2 बजे था जब यह सब शुरू हुआ। और 24 घंटे बाद, सुपर्ण को एक ही सम्मेलन में दो दूरस्थ प्रस्तुतियां देनी थीं। कहने के लिए पर्याप्त है, वह मुश्किल से सो गया।</span></p>
+<figure id="attachment_83569" aria-describedby="caption-attachment-83569" style="width: 2560px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-scaled.jpg"><img loading="lazy" class="size-full wp-image-83569" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-scaled.jpg" alt="" width="2560" height="1440" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-scaled.jpg 2560w, https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-300x169.jpg 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-1024x576.jpg 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-768x432.jpg 768w, https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-1536x864.jpg 1536w, https://www.classcentral.com/report/wp-content/uploads/2022/11/suparn-speaking-conference-2048x1152.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></a><figcaption id="caption-attachment-83569" class="wp-caption-text"><a href="https://lwmoocs-conference.org/lwmoocs2022/">MOOCs के साथ सीखने</a> में दूरस्थ रूप से एक भाषण देना</figcaption></figure>
+<p><span style="font-weight: 400;">हमें तेजी से एहसास हुआ कि यह हम अपने दम पर संभाल सकते हैं उससे कहीं अधिक है। डीडीओएस शमन की दुनिया में, एक नाम है (सार्वजनिक धारणा के संदर्भ में, कम से कम) जो सभी के ऊपर खड़ा है: </span><a href="https://www.cloudflare.com/"><span style="font-weight: 400;">क्लाउडफ्लेयर</span></a><span style="font-weight: 400;">। हमारे अपने प्रयासों के विफल होने के बाद, हमने आखिरकार Cloudflare पर स्विच करने का फैसला किया।</span></p>
+<h3><span style="font-weight: 400;"> बचाव के लिए</span><del><span style="font-weight: 400;"> Cloudflare</span></del> Suparn</h3>
+<p><span style="font-weight: 400;">लेकिन क्लाउडफ्लेयर पर स्विच करने के बाद भी, बॉट अभी भी गुजर रहे थे। इस बिंदु तक मेरी धारणा यह थी कि क्लाउडफ्लेयर जादुई रूप से सभी बॉट्स का पता लगाएगा और उन्हें अवरुद्ध कर देगा। |||UNTRANSLATED_CONTENT_START|||I was wrong.</span>|||UNTRANSLATED_CONTENT_END|||</p>
+<p><span style="font-weight: 400;">हमें क्लाउडफ्लेयर को स्पष्ट रूप से कॉन्फ़िगर करना था, सभी बॉट्स को प्रभावी ढंग से रोकने के लिए हमले की सेटिंग को सिलाई करना था। यह कुछ ऐसा है जिससे सुपरन और मैं वास्तव में परिचित नहीं थे। जब मैंने </span>क्लास सेंट्रल के बारे में लिंक्डइन पर हमले के बारे में<a href="https://www.linkedin.com/posts/dhawals_class-central-is-temporarily-offline-as-we-activity-6981608179470127104-qAK9"><span style="font-weight: 400;"> पोस्ट किया</span></a><span style="font-weight: 400;">, तो एक क्लाउडफ्लेयर इंजीनियर मेरे पास पहुंचा और मुझे एक खाता कार्यकारी के साथ जोड़ा।</span></p>
+<p><span style="font-weight: 400;">खाता कार्यकारी ने हमें Cloudflare वेबसाइट पर कुछ उपयोगी संसाधनों के लिए निर्देशित किया, दृष्टिकोण के साथ हम कोशिश कर सकते हैं। जब उनसे पूछा गया कि क्या वे क्लाउडफ्लेयर को कॉन्फ़िगर करने में हमारी मदद कर सकते हैं, तो हमने सीखा कि न्यूनतम 1 - वर्ष की प्रतिबद्धता के साथ प्रति माह हमें $ 5,000 खर्च होंगे। ईमानदारी से, हमलावर की कीमत अधिक उचित लग रही थी।</span></p>
+<p><span style="font-weight: 400;">लेकिन सभी आशा खो दिया है नहीं था। जब आप चुटकी में होते हैं, तो आप कभी - कभी अपने बंधनों को तोड़ने और जल्दी से स्तर बढ़ाने में सक्षम होते हैं। सबसे बुरा क्या हो सकता है? साइट पहले से ही नीचे थी।</span></p>
+<p><span style="font-weight: 400;">सुपर्ण ने बस यही किया। यह लगभग ऐसा था जैसे भविष्य से एक सुपर्ण वर्तमान सुपर्ण का मार्गदर्शन कर रहा था।</span></p>
+<p><span style="font-weight: 400;">यहां तक कि क्लाउडफ्लेयर पर स्विच करने जैसी कुछ चीजें आम तौर पर हमें परीक्षण और तैनाती के लिए सप्ताह लेती हैं। इसके बजाय, यह 30 मिनट से भी कम समय में किया गया था। बहुत सारे परीक्षण और त्रुटि के बाद, एक नींद से वंचित सुपर्ण ने बॉट को अवरुद्ध करने के लिए सही क्लाउडफ्लेयर कॉन्फ़िगरेशन का पता लगाया, जबकि वास्तविक मनुष्यों को क्लास सेंट्रल की यात्रा करने की अनुमति दी गई।</span></p>
+<p><span style="font-weight: 400;">यह रहस्य Cloudflare के </span><a href="https://developers.cloudflare.com/waf/rate-limiting-rules/"><span style="font-weight: 400;">Rate Limiting</span></a><span style="font-weight: 400;"> और </span><a href="https://developers.cloudflare.com/waf/tools/ip-access-rules/"><span style="font-weight: 400;">IP Access</span></a><span style="font-weight: 400;"> नियमों में निहित है। अंत में, हमलावर पीछे हट गया। हमले के शुरू होने के 36 घंटे बाद, क्लास सेंट्रल ऑनलाइन और स्थिर था।</span></p>
+<h2><span style="font-weight: 400;">लागत</span></h2>
+<figure id="attachment_83570" aria-describedby="caption-attachment-83570" style="width: 1558px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike.png"><img loading="lazy" class="size-full wp-image-83570" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike.png" alt="" width="1558" height="712" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike.png 1558w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike-300x137.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike-1024x468.png 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike-768x351.png 768w, https://www.classcentral.com/report/wp-content/uploads/2022/11/attack-cost-spike-1536x702.png 1536w" sizes="(max-width: 1558px) 100vw, 1558px" /></a><figcaption id="caption-attachment-83570" class="wp-caption-text">हमले के कारण क्लास सेंट्रल इंफ्रास्ट्रक्चर की लागत बढ़ रही है</figcaption></figure>
+<p><span style="font-weight: 400;">क्लास सेंट्रल परिचालन लागत हमारे द्वारा प्रदान किए जाने वाले यातायात की मात्रा की तुलना में अपेक्षाकृत कम है। लेकिन सिर्फ 36 घंटों में, महीने के लिए हमारी Google क्लाउड लागत दोगुनी हो गई। मूल रूप से बॉट ट्रैफ़िक की उच्च मात्रा ने हमारी नेटवर्किंग लागत को आसमान छूने का कारण बना दिया।</span></p>
+<p><span style="font-weight: 400;">संक्षेप में, बॉट ट्रैफ़िक की लागत हमें प्रति दिन $ 1,000 है, भले ही क्लास सेंट्रल इस समय के बहुमत से नीचे था। यह इस DDoS हमले के सबसे डरावने पहलुओं में से एक था और शायद यही कारण है कि ये हमले प्रभावी हो सकते हैं।</span></p>
+<h2><span style="font-weight: 400;">एसईओ प्रभाव</span></h2>
+<figure id="attachment_83574" aria-describedby="caption-attachment-83574" style="width: 3114px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final.png"><img loading="lazy" class="wp-image-83574 size-full" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final.png" alt="" width="3114" height="860" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final.png 3114w, https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final-300x83.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final-1024x283.png 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final-768x212.png 768w, https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final-1536x424.png 1536w, https://www.classcentral.com/report/wp-content/uploads/2022/11/click-drop-graph-final-2048x566.png 2048w" sizes="(max-width: 3114px) 100vw, 3114px" /></a><figcaption id="caption-attachment-83574" class="wp-caption-text">हमले के बाद एक क्लिक ड्रॉप हुआ जो सौभाग्य से लंबे समय तक नहीं चला</figcaption></figure>
+<p><span style="font-weight: 400;">सौभाग्य से, हमारे एसईओ पर दीर्घकालिक प्रभाव नहीं पड़ा। हमले के तुरंत बाद के सप्ताह में खोज यातायात में कमी आई थी, लेकिन तब से यह पलट गया है और ऊपर जाना जारी रखा है।</span></p>
+<p><span style="font-weight: 400;">एक बात जो मैंने नोटिस की थी वह Google से क्रॉल अनुरोधों में एक महत्वपूर्ण गिरावट थी। यह स्पष्ट नहीं है कि यह हमले या क्लाउडफ्लेयर के स्विच के कारण है या नहीं। लेकिन यह नजर रखने के लिए कुछ है।</span></p>
+<figure id="attachment_83572" aria-describedby="caption-attachment-83572" style="width: 1576px" class="wp-caption alignnone"><a href="https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684.png"><img loading="lazy" class="size-full wp-image-83572" src="https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684.png" alt="" width="1576" height="658" srcset="https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684.png 1576w, https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684-300x125.png 300w, https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684-1024x428.png 1024w, https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684-768x321.png 768w, https://www.classcentral.com/report/wp-content/uploads/2022/11/drawl-requests-drop-e1669117441684-1536x641.png 1536w" sizes="(max-width: 1576px) 100vw, 1576px" /></a><figcaption id="caption-attachment-83572" class="wp-caption-text">हमले और हमारे शमन उपायों के बाद Google से क्रॉल अनुरोध नीचे चला गया</figcaption></figure>
+<p><span style="font-weight: 400;">DDoS हमलों कुछ कई कंपनियों के लिए तैयार कर रहे हैं। हमारे मामले में, यह आग से एक परीक्षण था, मुश्किल समय से जटिल था। हमारे पास दुबला संचालन है, इसलिए एक समय - समय पर दृष्टिकोण हमारे लिए काम करता है। लेकिन कई स्टार्टअप के लिए, डाउनटाइम, यहां तक कि जब कम होता है, तो गंभीर परिणाम हो सकते हैं। यदि आप उस स्थिति में हैं, तो पूर्वनिर्धारित उपायों की संभावना एक अच्छा विचार है — खासकर यदि आपके पास अपनी टीम पर सुपरन नहीं है।</span></p>
+        </div>
+                <div class="border-top border-gray padding-top-large text-1">
+          <div class="row medium-up-nowrap  padding-bottom-large ">
+    <div class="small-down-text-left radius-50 overflow-hidden small-down-width-100 medium-up-margin-right-medium">
+      <img
+        width="75"
+        height="75"
+        src="https://www.classcentral.com/report/wp-content/uploads/2020/03/dhawal-shah-150x150.png"
+        alt="धवल शाह प्रोफ़ाइल फ़ोटो"
+        class="author_image radius-circle fit inline-block medium-up-block"
+      >
+    </div>
+    <div class="small-down-width-100">
+      <div>
+        <h3 class="text-1 weight-bold">
+          <a
+            href="../author/dhawal/index.html"
+            class="color-black">
+            धवल शाह
+          </a>
+ </h3>
+        <div class="text-article margin-bottom-xsmall">
+          धवल क्लास सेंट्रल के सीईओ हैं, जो ऑनलाइन पाठ्यक्रमों और एमओओसी के लिए सबसे लोकप्रिय खोज इंजन और समीक्षा साइट है। उन्होंने एक दर्जन से अधिक एमओओसी पूरे किए हैं और टेकक्रंच, एडसर्ज, क्वार्ट्ज और वेंचरबीट में योगदान सहित एमओओसी स्पेस के बारे में 200 से अधिक लेख लिखे हैं।
+ </div>
+      </div>
+      <div class="text-left"><a href="../author/dhawal/index.html"
+           class="outro_link color-blue text-1">Dhawal shah से जुड़े अन्य समाचार »
+        
+                  </a>
+
+ </div>
+    </div>
+  </div>
+        </div>
+      </div>
+      <aside id="cmpt-aside" class="border-gray margin-bottom-medium medium-down-border-top medium-down-padding-top-medium width-100 large-up-width-5-16 border-box large-up-padding-left-xxlarge">
+                <h3 class="head-2 large-up-head-3 margin-vert-small">संबंधित</h3>
+        <ul class="list-no-style">
+                  <li class="row nowrap vert-align-top margin-bottom-small">
+            <div class="margin-right-xsmall margin-top-xsmall">
+              <span class="bg-gray-light block radius-circle" style="width: 8px; height: 8px;"></span>
+            </div>
+            <div>
+              <a
+                data-track-ga='{"category": "the report: related clicks", "action": "DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs", "label": "3 Million Sign-Ups, 100,000+ Courses: Class Central’s 2022 Year in Review"}'
+                href="https://www.classcentral.com/report/class-central-2022-review/" class="text-1 large-up-text-2 color-charcoal border-bottom border-gray-light hover-no-underline">3 मिलियन साइन - अप, 100,000+ पाठ्यक्रम: कक्षा केंद्रीय की समीक्षा में 2022 वर्ष</a>
+ </div>
+          </li>
+                  <li class="row nowrap vert-align-top margin-bottom-small">
+            <div class="margin-right-xsmall margin-top-xsmall">
+              <span class="bg-gray-light block radius-circle" style="width: 8px; height: 8px;"></span>
+            </div>
+            <div>
+              <a
+                data-track-ga='{"category": "the report: related clicks", "action": "DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs", "label": "Class Central: 8 Years in the Making"}'
+                href="https://www.classcentral.com/report/class-central-8th-anniversary/" class="text-1 large-up-text-2 color-charcoal border-bottom border-gray-light hover-no-underline">कक्षा केंद्रीय: बनाने में 8 साल</a>
+ </div>
+          </li>
+                  <li class="row nowrap vert-align-top margin-bottom-small">
+            <div class="margin-right-xsmall margin-top-xsmall">
+              <span class="bg-gray-light block radius-circle" style="width: 8px; height: 8px;"></span>
+            </div>
+            <div>
+              <a
+                data-track-ga='{"category": "the report: related clicks", "action": "DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs", "label": "18M Learners, 70K Reviews: Class Central’s 2020 Year in Review"}'
+                href="https://www.classcentral.com/report/class-central-2020-review/" class="text-1 large-up-text-2 color-charcoal border-bottom border-gray-light hover-no-underline">18M शिक्षार्थियों, 70K समीक्षा: समीक्षा में कक्षा केंद्रीय 2020 वर्ष</a>
+ </div>
+          </li>
+                  <li class="row nowrap vert-align-top margin-bottom-small">
+            <div class="margin-right-xsmall margin-top-xsmall">
+              <span class="bg-gray-light block radius-circle" style="width: 8px; height: 8px;"></span>
+            </div>
+            <div><a
+                data-track-ga='{"category": "the report: related clicks", "action": "DDoS Attack on Class Central: Mitigation, SEO Impact, and Costs", "label": "Class Central’s 2016: Year in Review"}'
+                href="https://www.classcentral.com/report/class-central-2016-review/" class="text-1 large-up-text-2 color-charcoal border-bottom border-gray-light hover-no-underline">केंद्रीय कक्षा 2016: समीक्षा में वर्ष</a>
+
+ </div>
+          </li>
+                </ul>
+        
+        <p class="large-down-hidden margin-top-large margin-left-medium">|||UNTRANSLATED_CONTENT_START|||
+          <a class="color-charcoal border-bottom border-gray-light hover-no-underline" href="../../about">About Class Central</a>
+        |||UNTRANSLATED_CONTENT_END|||</p>
+        
+                          <a
+            href="../emoocs-2023-cfp/index.html"
+            target=""
+            style="border-color: #ffcfc1; width: 135px;"
+            rel="nofollow"
+            class="cmpt-ad margin-horz-small large-up-block border-box hidden width-100 relative margin-vert-medium padding-horz-xsmall padding-bottom-small border-all radius-small hover-no-underline"
+          >
+            <span class="block padding-top-large">
+                              <img class="width-100" src="https://www.classcentral.com/report/wp-content/uploads/2022/12/emoocs-2023-banner-final-300x150.png">
+                                            <span class="text-4 color-charcoal block">EMOOCs 2023 सम्मेलन (पॉट्सडैम, जून 14 -16): कागजात के लिए कॉल लाइव है!</span>
+                          </span>
+            <span
+              class="cmpt-ad-text text-4 border-all radius-small weight-semi absolute margin-top-xsmall padding-horz-xxsmall"
+            >
+ AD
+                        </span>
+          </a>
+ </aside>
+    </section>
+  </div>
+</article>
+
+<section class="max-950 border-box width-centered medium-down-padding-horz-medium large-up-padding-left-xxlarge">
+  <div class="width-100 large-up-width-11-16">
+    <div id="commentSection" class="border-top border-gray padding-vert-large margin-bottom-xlarge">
+    <div class="margin-bottom-large">
+    <h3 class="row nowrap margin-bottom-xxsmall vert-align-middle">
+      <span class="head-2 margin-right-small">
+        टिप्पणियाँ
+      </span>        
+      <i class="icon-comment-charcoal icon-large icon-center relative" style="top: 2px"></i>
+      <span class="color-charcoal margin-left-xsmall head-3 weight-light">8</span>
+ </h3>
+  </div>
+    <div class="color-charcoal width-100">
+    
+  <section id="comments" class="padding-bottom-medium border-bottom border-gray margin-bottom-large">
+    <ol class="list-no-style comments_list">
+      
+  <li class="comment even thread-even depth-1 comment-337881">
+    <div
+  id="comment-337881"
+  class="
+    padding-vert-large
+    border-top border-gray-light  "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img alt='' src='https://secure.gravatar.com/avatar/5e89188b3a29cfdbda300f7b13698f53?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5e89188b3a29cfdbda300f7b13698f53?s=70&#038;d=mm&#038;r=g 2x' class='avatar avatar-35 photo' height='35' width='35' loading='lazy'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">जेफ विनचेल</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T03:32:01-08:00">
+      11/30/2022 को 3:32पूर्वाह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>खुशी है कि आप बच गए और उन्हें हरा दिया।</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337881' data-commentid="337881" data-postid="83561" data-belowelement="comment-337881" data-respondelement="respond" data-replyto="Reply to Jeff Winchell" aria-label='Reply to Jeff Winchell'>जवाब दें</a></div>
+  </li>
+
+  <li class="comment odd alt thread-odd thread-alt depth-1 comment-337882">
+    <div
+  id="comment-337882"
+  class="
+    padding-vert-large
+    border-top border-gray-light  "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img alt='' src='https://secure.gravatar.com/avatar/bf0bc6008264790562349bca7bdd1b33?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/bf0bc6008264790562349bca7bdd1b33?s=70&#038;d=mm&#038;r=g 2x' class='avatar avatar-35 photo' height='35' width='35' loading='lazy'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">लुई</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T07:38:44-08:00">
+      11/30/2022 को 7:38पूर्वाह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>बहुत बढ़िया लेख! और मुझे यह कहना है कि आमतौर पर इन चीजों के बारे में बात करना बहुत मुश्किल होता है, एक अर्थ में विफलता। मैंने छोटे स्टार्टअप दुर्घटना और जला देखा है और इस कारण से फिरौती का भुगतान करने के बारे में सक्रिय रूप से सोच रहा हूं। इस कहानी के साथ पारदर्शी होने के लिए धन्यवाद। मुझे खुद से पहले एक दो बार सुपरन की आवश्यकता होगी, हाहा। टिप्स और ट्रिक्स और प्रभाव टन एसईओ दिखाने के लिए धन्यवाद, वास्तव में एक और तकनीक एसईओ द्वारा सराहना की 😉</p>
+<p>अभी भी लंबी अवधि के प्रभावों के बारे में उत्सुक हैं, न केवल क्रॉल दर। अधिक साझा करने के लिए संपर्क करने के लिए स्वतंत्र महसूस करें, यह एक खुशी होगी।</p>
+<p>GrowthLouis</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337882' data-commentid="337882" data-postid="83561" data-belowelement="comment-337882" data-respondelement="respond" data-replyto="Reply to Louis" aria-label='Reply to Louis'>जवाब दें</a></div>
+  </li>
+
+  <li class="comment even thread-even depth-1 comment-337883">
+    <div
+  id="comment-337883"
+  class="
+    padding-vert-large
+    border-top border-gray-light  "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img alt='' src='https://secure.gravatar.com/avatar/6e9865fac7b556fbcf5e7a8d2721ae02?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6e9865fac7b556fbcf5e7a8d2721ae02?s=70&#038;d=mm&#038;r=g 2x' class='avatar avatar-35 photo' height='35' width='35' loading='lazy'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">डोमिनिक</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T08:22:36-08:00">
+      11/30/2022 को 8:22पूर्वाह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>मैं Cloudflare से हमले मोड के तहत कर रहा हूँ सब पर मदद नहीं की?
+<br />इसके अलावा, इस WP ब्लॉग पर – classcentral.com/report आप x – powered - by: PHP/7.1.22 हेडर लीक कर रहे हैं। PHP 7.1 अब 01 दिसंबर 2019 तक आधिकारिक तौर पर समर्थित नहीं है।
+<br />और आप नवीनतम Yoast SEO संस्करण का उपयोग नहीं कर रहे हैं।
+<br />मैं यह लिख रहा हूं क्योंकि आपको यह बताने के लिए कि मैं कोडिंग में कुल शौकिया हूं या कुछ भी उन बुनियादी चीजों में से कुछ देख सकता हूं और मुझे यकीन है कि असली हैकर और भी कमजोरियों को पा सकता है और समस्या यह है कि आप उपयोग नहीं कर रहे हैं अप टू डेट सॉफ्टवेयर और आप अपनी वेबसाइटों को उतना अच्छा नहीं बना रहे हैं जितना आप कर सकते थे।
+<br />मुझे यकीन है कि इस हमले को मुफ्त क्लाउडफ्लेयर योजना के साथ भी तेजी से रोका जा सकता था।
+<br />वैसे भी, एक रिपोर्ट के लिए धन्यवाद। खुशी है कि आपने सब कुछ सुलझा लिया है।</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337883' data-commentid="337883" data-postid="83561" data-belowelement="comment-337883" data-respondelement="respond" data-replyto="Reply to Dominik" aria-label='Reply to Dominik'>जवाब दें</a></div>
+      <ul class="comment odd alt thread-odd thread-alt depth-1 margin-left-small padding-left-large border-left border--gray-dark margin-bottom-large list-unstyled comment-337883">
+    
+  <li class="comment byuser comment-author-dhawal bypostauthor even depth-2 comment-337891">
+    <div
+  id="comment-337891"
+  class="
+    padding-vert-large
+      "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img data-del="avatar" src='https://www.classcentral.com/report/wp-content/uploads/2020/03/dhawal-shah-150x150.png' class='avatar pp-user-avatar avatar-35 photo ' height='35' width='35'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">धवल शाह</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T15:03:01-08:00">
+      11/30/2022 को 3:03अपराह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>रिपोर्ट (वर्डप्रेस इंस्टेंस) और मुख्य उत्पाद अलग - अलग कोडबेस/इंस्टेंस हैं। वास्तव में रिपोर्ट अभी भी हमले के दौरान काम कर रही थी, जब तक कि हमने इसे खुद नहीं लिया।</p>
+<p>हम इसे Cloudflare के बिना नहीं रोक सकते थे, लेकिन इसके लिए कुछ कॉन्फ़िगरेशन और ट्विकिंग की आवश्यकता थी। उनका यूआई बहुत सहज है, एनालिटिक्स बहुत जल्दी ताज़ा हो जाते हैं, और कॉन्फ़िगरेशन परिवर्तन तेजी से तैनात होते हैं। यह तेजी से पुनरावृत्ति के साथ मदद की।</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337891' data-commentid="337891" data-postid="83561" data-belowelement="comment-337891" data-respondelement="respond" data-replyto="Reply to Dhawal Shah" aria-label='Reply to Dhawal Shah'>जवाब दें</a></div>
+  </li>
+</ul></li>
+
+  <li class="comment odd alt thread-even depth-1 comment-337884">
+    <div
+  id="comment-337884"
+  class="
+    padding-vert-large
+    border-top border-gray-light  "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img alt='' src='https://secure.gravatar.com/avatar/e076d1995a70e8566cf03086f0847df1?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e076d1995a70e8566cf03086f0847df1?s=70&#038;d=mm&#038;r=g 2x' class='avatar avatar-35 photo' height='35' width='35' loading='lazy'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">एके</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T08:40:07-08:00">
+      11/30/2022 को 8:40पूर्वाह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>बी धवल,</p>
+<p>खुशी है कि यह भयानक घटना अब आपके पीछे है। जिज्ञासा से बाहर, आप क्लाउड फ्लेयर पर क्यों बस गए (Imperva या Akamai के विपरीत, जिनमें से दोनों DDoS सुरक्षा समाधान प्रदान करते हैं)? क्या यह मुख्य रूप से महंगा था?</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337884' data-commentid="337884" data-postid="83561" data-belowelement="comment-337884" data-respondelement="respond" data-replyto="Reply to AK" aria-label='Reply to AK'>जवाब दें</a></div>
+      <ul class="comment even thread-odd thread-alt depth-1 margin-left-small padding-left-large border-left border--gray-dark margin-bottom-large list-unstyled comment-337884">
+    
+  <li class="comment byuser comment-author-dhawal bypostauthor odd alt depth-2 comment-337890">
+    <div
+  id="comment-337890"
+  class="
+    padding-vert-large
+      "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img data-del="avatar" src='https://www.classcentral.com/report/wp-content/uploads/2020/03/dhawal-shah-150x150.png' class='avatar pp-user-avatar avatar-35 photo ' height='35' width='35'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">धवल शाह</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T14:55:15-08:00">
+      11/30/2022 को 2:55अपराह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>मैं केवल Cloudflare से परिचित था। लेकिन इसके दिखने से, वे सभी &quot;मूल्य निर्धारण के लिए हमसे संपर्क करें&quot; विवरण प्रतीत होते हैं। इसकी कीमत आम तौर पर हमारे पूरे मेज़बानी बजट से भी ज़्यादा होगी। Cloudflare में प्रवेश के लिए काफी कम बाधा है और मुफ्त/$ 20/$ 200 मूल्य बिंदुओं पर बहुत कुछ प्रदान करता है।</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337890' data-commentid="337890" data-postid="83561" data-belowelement="comment-337890" data-respondelement="respond" data-replyto="Reply to Dhawal Shah" aria-label='Reply to Dhawal Shah'>जवाब दें</a></div>
+  </li>
+</ul></li>
+
+  <li class="comment even thread-even depth-1 comment-337886">
+    <div
+  id="comment-337886"
+  class="
+    padding-vert-large
+    border-top border-gray-light  "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img alt='' src='https://secure.gravatar.com/avatar/a2b32bd7e654f3d41043ee97be565029?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a2b32bd7e654f3d41043ee97be565029?s=70&#038;d=mm&#038;r=g 2x' class='avatar avatar-35 photo' height='35' width='35' loading='lazy'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">विक्टोरिया</span>
+ <time class="comment_time color-gray" datetime="2022-11-30T11:02:56-08:00">
+      11/30/2022 को 11:02पूर्वाह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>मजेदार, अपनी कहानी साझा करने के लिए धन्यवाद!</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-337886' data-commentid="337886" data-postid="83561" data-belowelement="comment-337886" data-respondelement="respond" data-replyto="Reply to Victoria" aria-label='Reply to Victoria'>जवाब दें</a></div>
+  </li>
+
+  <li class="comment odd alt thread-odd thread-alt depth-1 comment-338063">
+    <div
+  id="comment-338063"
+  class="
+    padding-vert-large
+    border-top border-gray-light  "
+
+>
+  <div class="comment_header row nowrap vert-align-middle margin-bottom-xsmall">
+    <div class="comment_avatar margin-right-xsmall radius-circle scrollable-hidden">
+      <img alt='' src='https://secure.gravatar.com/avatar/8dca1245de2387759730ccc2a071016b?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/8dca1245de2387759730ccc2a071016b?s=70&#038;d=mm&#038;r=g 2x' class='avatar avatar-35 photo' height='35' width='35' loading='lazy'/>    </div>
+    <h4 class="comment_title text-2">
+      <span class="weight-semi color-charcoal block">एपी फेलिक्स अरोकिया राज</span>
+ <time class="comment_time color-gray" datetime="2023-01-05T04:28:44-08:00">
+      1/5/2023 को 4:28पूर्वाह्न पर </time>
+    </h4>
+    
+      </div>
+  <div class="comment_body margin-bottom-small wysiwyg text-1">
+    <p>इस प्रेरणादायक लेख के लिए धन्यवाद। मैं इस संकट के दौरान आपके नेतृत्व की सराहना करता हूं। कठिनाइयों के बारे में जानना दर्दनाक था लेकिन आपकी सफलता की कहानी के बारे में जानने में खुशी हुई। ये चोटें आपको मजबूत बनाती हैं। ClassCentral के लिए शुभकामनाएं।</p>
+  </div>
+  <a rel='nofollow' class='comment-reply-link' href='index.html#comment-338063' data-commentid="338063" data-postid="83561" data-belowelement="comment-338063" data-respondelement="respond" data-replyto="Reply to A.P. Felix Arokiya Raj" aria-label='Reply to A.P. Felix Arokiya Raj'>जवाब दें</a></div>
+  </li>
+    </ol>
+
+    
+      </section><!-- /#comments -->
+
+
+  <section id="respond" class="margin-bottom-xxlarge">
+    <h3 class="margin-bottom-small head-3">जवाब दें</h3>
+          <form action="https://www.classcentral.com/report/wp-comments-post.php" method="post" id="commentform"
+            class="width-100">
+                  <div class="padding-small bg-gray-light radius-small margin-bottom-large text-1">
+            <i class="icon-alert-blue icon-small margin-right-xxsmall"></i>
+            आपका ईमेल पता प्रकाशित नहीं किया जाएगा। सभी टिप्पणियां मॉडरेशन के माध्यम से जाती हैं, इसलिए आपकी टिप्पणी तुरंत प्रदर्शित नहीं होगी।
+ </div>
+          <div class="form-group margin-top-large">
+            <label for="comment" class="text-1 margin-bottom-small block">टिप्पणी</label>
+            <textarea name="comment" id="comment"
+                      class="form-control border-box padding-small border-gray-mid border-all radius-small width-100"
+                      rows="14" aria-required="true"></textarea>
+ </div>
+          <div class="form-group margin-top-large">
+            <label for="author" class="text-1 margin-bottom-small block">नाम <span
+                  class="italic">(आवश्यक)</span></label>
+            <input type="text"
+                   class="form-control border-box padding-small border-gray-mid border-all radius-small width-100"
+                   name="author" id="author" value=""
+                   size="22"  aria-required="true" >
+ </div>
+          <div class="form-group margin-top-large">
+            <label
+                for="email" class="text-1 margin-bottom-small block">ईमेल <span
+                  class="italic">(आवश्यक)</span></label>
+            <input type="email"
+                   class="form-control border-box padding-small border-gray-mid border-all radius-small width-100"
+                   name="email" id="email"
+                   value=""
+                   size="22"  aria-required="true" >
+ </div>
+                <p class="margin-top-large"><input name="submit" class="btn-blue btn-large"
+                                           type="submit" id="submit"
+                                           value="टिप्पणी पोस्ट करें"><span
+              class="cancel-comment-reply margin-left-xlarge text-2"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">रद्द करें</a></span>
+ </p>
+        <input type='hidden' name='comment_post_ID' value='83561' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e6cfe708a2" /></p><p style="display: none !important;"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js" name="ak_js" value="235"/><script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.getElementById( "ak_js" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>        <div class="margin-top-large">
+          <p class="akismet_comment_form_privacy_notice">यह साइट स्पैम को कम करने के लिए अकिस्मेट का उपयोग करती है। <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">जानें कि आपका टिप्पणी डेटा कैसे संसाधित किया जाता है</a>।</p>        </div>
+      </form>
+      </section><!-- /#respond -->
+  </div>
+</div>  </div>
+</section>
+      </div>
+  <section class="width-page margin-vert-xlarge small-down-padding-horz-medium border-box">
+          <header class="padding-vert-medium border-bottom border-gray-light">
+            <h1 class="head-2 margin-bottom-xxsmall">हमारी कैटलॉग ब्राउज़ करें</h1>
+            <p class="text-1">एमआईटी, स्टैनफोर्ड और हार्वर्ड जैसे दुनिया भर के शीर्ष विश्वविद्यालयों के हजारों मुफ्त ऑनलाइन पाठ्यक्रमों की खोज करें।</p>
+          </header>
+          <ul class="row margin-top-medium margin-bottom-medium list-no-style" style="margin: 0px -20px;">
+             
+            <li class="medium-up-block width-100 medium-up-width-1-2 large-up-width-1-3 margin-vert-medium medium-up-margin-bottom-large border-box padding-horz-medium">
+              <h3 class="row vert-align-middle">
+                <a class="border-box align-middle padding-right-xsmall" href="../../subject/cs" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <img src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/subjects/cs.svg" alt="कंप्यूटर विज्ञान विषय आइकन" width="55" height="55">
+                </a>
+                <a class="border-box align-middle color-charcoal hover-no-underline" href="../../subject/cs" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <span class="text-1 color-charcoal weight-bold block">कंप्यूटर विज्ञान</span>
+                  <span class="text-1 icon-left-small">9,108                  पाठ्यक्रम
+                  
+                  </span>
+                </a>
+ </h3>
+              
+                            <ul class="list-no-style medium-up-margin-vert-xxsmall">      
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/blockchain"
+                    title="Blockchain विकास MOOCs की सूची"
+                  >
+                    Blockchain विकास
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/operating-systems"
+                    title="संचालन प्रणालियों की सूची"
+                  >
+                    ऑपरेटिंग सिस्टम
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/computer-graphics"
+                    title="कंप्यूटर ग्राफिक्स MOOCs की सूची"
+                  >
+                    कंप्यूटर ग्राफिक्स
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="../../subject/ai"
+                    title="आर्टिफिशियल इंटेलिजेंस एमओओसी की सूची"
+                  >
+                    आर्टिफिशियल इंटेलिजेंस
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="../../subject/algorithms-and-data-structures"
+                    title="एल्गोरिदम और डेटा संरचनाओं की सूची MOOCs"
+                  >
+                    एल्गोरिदम और डेटा संरचनाएं
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="../../subject/internet-of-things"
+                    title="इंटरनेट ऑफ थिंग्स एमओओसी की सूची"
+                  >
+                    इंटरनेट ऑफ थिंग्स
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/information-technology"
+                    title="सूचना प्रौद्योगिकी एमओओसी की सूची"
+                  >
+                    सूचना प्रौद्योगिकी
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/hci"
+                    title="मानव - कंप्यूटर इंटरैक्शन (HCI) MOOCs की सूची"
+                  >
+                    मानव - कंप्यूटर इंटरैक्शन (HCI)
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/computer-networking"
+                    title="कंप्यूटर नेटवर्किंग MOOCs की सूची"
+                  >
+                    कंप्यूटर नेटवर्किंग
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/machine-learning"
+                    title="मशीन लर्निंग एमओओसी की सूची"
+                  >
+                    मशीन लर्निंग
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/devops"
+                    title="DevOps MOOCs की सूची"
+                  >
+                    DevOps
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall"><a
+                    class="text-2 link-gray-underline"
+                    href="../../subject/deep-learning"
+                    title="डीप लर्निंग एमओओसी की सूची"
+                  >ध्यान लगा के पढ़ना या सीखना</a> </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/distributed-systems"
+                    title="वितरित प्रणालियों की सूची एमओओसी"
+                  >
+                    वितरित प्रणालियां
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/cryptography"
+                    title="क्रिप्टोग्राफी MOOCs की सूची"
+                  >
+                    क्रिप्टोग्राफ़ी
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/quantum-computing"
+                    title="क्वांटम कम्प्यूटिंग एमओओसी की सूची"
+                  >
+                    क्वांटम कम्प्यूटिंग
+                  </a>
+ </li>
+                              </ul>
+                          </li>    
+             
+            <li class="medium-up-block width-100 medium-up-width-1-2 large-up-width-1-3 margin-vert-medium medium-up-margin-bottom-large border-box padding-horz-medium">
+              <h3 class="row vert-align-middle">
+                <a class="border-box align-middle padding-right-xsmall" href="https://www.classcentral.com/subject/business" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <img src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/subjects/business.svg" alt="व्यवसाय विषय आइकन" width="55" height="55">
+                </a>
+                <a class="border-box align-middle color-charcoal hover-no-underline" href="https://www.classcentral.com/subject/business" title="व्यापार एमओओसी की सूची">
+                  <span class="text-1 color-charcoal weight-bold block">व्यापार</span>
+                  <span class="text-1 icon-left-small">19,593                  पाठ्यक्रम
+                  
+                  </span>
+                </a>
+ </h3>
+              
+                            <ul class="list-no-style medium-up-margin-vert-xxsmall">      
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/management-and-leadership"
+                    title="प्रबंधन और नेतृत्व MOOCs की सूची"
+                  >
+                    प्रबंधन और नेतृत्व
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/finance"
+                    title="वित्त एमओओसी की सूची"
+                  >
+                    वित्त
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/entrepreneurship"
+                    title="उद्यमिता एमओओसी की सूची"
+                  >
+                    उद्यमिता
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/innovation"
+                    title="नवाचार एमओओसी की सूची"
+                  >
+                    इनोवेशन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/marketing"
+                    title="विपणन एमओओसी की सूची"
+                  >
+                    मार्केटिंग
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/risk-management"
+                    title="जोखिम प्रबंधन एमओओसी की सूची"
+                  >
+                    जोखिम प्रबंधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/operations-management"
+                    title="संचालन प्रबंधन एमओओसी की सूची"
+                  >
+                    संचालन प्रबंधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/strategic-management"
+                    title="सामरिक प्रबंधन एमओओसी की सूची"
+                  >
+                    सामरिक प्रबंधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/industry-specific"
+                    title="उद्योग विशिष्ट एमओओसी की सूची"
+                  >
+                    उद्योग विशिष्ट
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/business-intelligence"
+                    title="व्यापार खुफिया MOOCs की सूची"
+                  >
+                    व्यापार खुफिया
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/csr"
+                    title="कॉर्पोरेट सामाजिक उत्तरदायित्व एमओओसी की सूची"
+                  >
+                    कॉर्पोरेट सामाजिक उत्तरदायित्व
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/accounting"
+                    title="लेखांकन एमओओसी की सूची"
+                  >
+                    लेखांकन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/human-resources"
+                    title="मानव संसाधन एमओओसी की सूची"
+                  >
+                    मानव संसाधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/project-management"
+                    title="परियोजना प्रबंधन एमओओसी की सूची"
+                  >
+                    परियोजना प्रबंधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/sales"
+                    title="बिक्री एमओओसी की सूची"
+                  >
+                    विक्रय
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/design-thinking"
+                    title="डिजाइन थिंकिंग एमओओसी की सूची"
+                  >
+                    डिजाइन थिंकिंग
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/nonprofit"
+                    title="गैर - लाभकारी प्रबंधन MOOCs की सूची"
+                  >
+                    गैर - लाभकारी प्रबंधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/customer-service"
+                    title="ग्राहक सेवा एमओओसी की सूची"
+                  >
+                    ग्राहक सेवा
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/business-software"
+                    title="व्यापार सॉफ्टवेयर MOOCs की सूची"
+                  >
+                    व्यापार सॉफ्टवेयर
+                  </a>
+ </li>
+                              </ul>
+                          </li>    
+             
+            <li class="medium-up-block width-100 medium-up-width-1-2 large-up-width-1-3 margin-vert-medium medium-up-margin-bottom-large border-box padding-horz-medium">
+              <h3 class="row vert-align-middle">
+                <a class="border-box align-middle padding-right-xsmall" href="https://www.classcentral.com/subject/humanities" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <img src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/subjects/humanities.svg" alt="मानविकी विषय आइकन" width="55" height="55">
+                </a>
+                <a class="border-box align-middle color-charcoal hover-no-underline" href="https://www.classcentral.com/subject/humanities" title="मानविकी एमओओसी की सूची">
+                  <span class="text-1 color-charcoal weight-bold block">मानविकी</span>
+                  <span class="text-1 icon-left-small">5,107                  पाठ्यक्रम
+                  
+                  </span>
+                </a>
+ </h3>
+              
+                            <ul class="list-no-style medium-up-margin-vert-xxsmall">      
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/history"
+                    title="इतिहास एमओओसी की सूची"
+                  >
+                    इतिहास
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/literature"
+                    title="साहित्य एमओओसी की सूची"
+                  >
+                    साहित्य
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/reading"
+                    title="पठन MOOCs की सूची"
+                  >
+                    पढ़ना
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/language-learning"
+                    title="भाषा सीखने MOOCs की सूची"
+                  >
+                    भाषा सीखना
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/grammar-writing"
+                    title="व्याकरण और लेखन एमओओसी की सूची"
+                  >
+                    व्याकरण और लेखन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/philosophy"
+                    title="दर्शन MOOCs की सूची"
+                  >
+                    दर्शनशास्त्र
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/religion"
+                    title="धर्म MOOCs की सूची"
+                  >
+                    धर्म
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/food"
+                    title="खाद्य एमओओसी की सूची"
+                  >
+                    भोजन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/crisis-management"
+                    title="संकट प्रबंधन एमओओसी की सूची"
+                  >
+                    संकट प्रबंधन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/esl"
+                    title="ईएसएल एमओओसी की सूची"
+                  >
+                    ईएसएल
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/culture"
+                    title="संस्कृति एमओओसी की सूची"
+                  >
+                    संस्कृति
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/sports"
+                    title="खेल MOOCs की सूची"
+                  >
+                    खेलकूद
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/library-science"
+                    title="पुस्तकालय विज्ञान एमओओसी की सूची"
+                  >
+                    पुस्तकालय विज्ञान
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/journalism"
+                    title="पत्रकारिता MOOCs की सूची"
+                  >
+                    पत्रकारिता
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/ethics"
+                    title="नैतिकता एमओओसी की सूची"
+                  >
+                    आचारशास्त्र
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/linguistics"
+                    title="भाषाविज्ञान एमओओसी की सूची"
+                  >
+                    भाषाविज्ञान
+                  </a>
+ </li>
+                              </ul>
+                          </li>    
+             
+            <li class="medium-up-block width-100 medium-up-width-1-2 large-up-width-1-3 margin-vert-medium medium-up-margin-bottom-large border-box padding-horz-medium">
+              <h3 class="row vert-align-middle">
+                <a class="border-box align-middle padding-right-xsmall" href="https://www.classcentral.com/subject/data-science" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <img src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/subjects/data-science.svg" alt="डेटा विज्ञान विषय आइकन" width="55" height="55">
+                </a>
+                <a class="border-box align-middle color-charcoal hover-no-underline" href="https://www.classcentral.com/subject/data-science" title="डेटा विज्ञान MOOCs की सूची">
+                  <span class="text-1 color-charcoal weight-bold block">डेटा साइंस</span>
+                  <span class="text-1 icon-left-small">2,906                  पाठ्यक्रम
+                  
+                  </span>
+                </a>
+ </h3>
+              
+                            <ul class="list-no-style medium-up-margin-vert-xxsmall">      
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/bioinformatics"
+                    title="जैव सूचना विज्ञान एमओओसी की सूची"
+                  >
+                    जैव सूचना विज्ञान
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/big-data"
+                    title="बिग डेटा MOOCs की सूची"
+                  >
+                    बिग डेटा
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/data-mining"
+                    title="डेटा माइनिंग एमओओसी की सूची"
+                  >
+                    डेटा माइनिंग
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/data-analysis"
+                    title="डेटा विश्लेषण MOOCs की सूची"
+                  >
+                    डेटा विश्लेषण
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/data-visualization"
+                    title="डेटा विज़ुअलाइज़ेशन MOOCs की सूची"
+                  >
+                    डेटा विज़ुअलाइज़ेशन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/jupyter"
+                    title="Jupyter नोटबुक MOOCs की सूची"
+                  >
+                    Jupyter नोटबुक
+                  </a>
+ </li>
+                              </ul>
+                          </li>    
+             
+            <li class="medium-up-block width-100 medium-up-width-1-2 large-up-width-1-3 margin-vert-medium medium-up-margin-bottom-large border-box padding-horz-medium">
+              <h3 class="row vert-align-middle">
+                <a class="border-box align-middle padding-right-xsmall" href="https://www.classcentral.com/subject/personal-development" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <img src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/subjects/personal-development.svg" alt="व्यक्तिगत विकास विषय चिह्न" width="55" height="55">
+                </a>
+                <a class="border-box align-middle color-charcoal hover-no-underline" href="https://www.classcentral.com/subject/personal-development" title="व्यक्तिगत विकास एमओओसी की सूची">
+                  <span class="text-1 color-charcoal weight-bold block">व्यक्तिगत विकास</span>
+                  <span class="text-1 icon-left-small">3,456                  पाठ्यक्रम
+                  
+                  </span>
+                </a>
+ </h3>
+              
+                            <ul class="list-no-style medium-up-margin-vert-xxsmall">      
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/resilience"
+                    title="लचीलापन एमओओसी की सूची"
+                  >
+                    लचीलापन
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/communication-skills"
+                    title="संचार कौशल एमओओसी की सूची"
+                  >
+                    संचार कौशल
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/career-development"
+                    title="कैरियर विकास एमओओसी की सूची"
+                  >
+                    कैरियर विकास
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/self-improvement"
+                    title="स्व - सुधार एमओओसी की सूची"
+                  >
+                    आत्म सुधार
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/presentation-skills"
+                    title="प्रस्तुति कौशल MOOCs की सूची"
+                  >
+                    प्रस्तुति कौशल
+                  </a>
+ </li>
+                              </ul>
+                          </li>    
+             
+            <li class="medium-up-block width-100 medium-up-width-1-2 large-up-width-1-3 margin-vert-medium medium-up-margin-bottom-large border-box padding-horz-medium">
+              <h3 class="row vert-align-middle">
+                <a class="border-box align-middle padding-right-xsmall" href="https://www.classcentral.com/subject/art-and-design" title="कंप्यूटर विज्ञान MOOCs की सूची">
+                  <img src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/images/subjects/art-and-design.svg" alt="कला और डिज़ाइन विषय आइकन" width="55" height="55">
+                </a>
+                <a class="border-box align-middle color-charcoal hover-no-underline" href="https://www.classcentral.com/subject/art-and-design" title="कला और डिजाइन एमओओसी की सूची">
+                  <span class="text-1 color-charcoal weight-bold block">कला और डिजाइन</span>
+                  <span class="text-1 icon-left-small">15,746                  पाठ्यक्रम
+                  
+                  </span>
+                </a>
+ </h3>
+              
+                            <ul class="list-no-style medium-up-margin-vert-xxsmall">      
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/music"
+                    title="संगीत MOOCs की सूची"
+                  >
+                    संगीत
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/digital-media"
+                    title="डिजिटल मीडिया एमओओसी की सूची"
+                  >
+                    डिजिटल मीडिया
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/visual-arts"
+                    title="दृश्य कला MOOCs की सूची"
+                  >
+                    दृश्य कला
+                  </a>
+ </li>
+                                <li class="inline-block margin-right-xsmall margin-bottom-xxsmall small-down-padding-vert-xxsmall">
+                  <a
+                    class="text-2 link-gray-underline"
+                    href="https://www.classcentral.com/subject/design-and-creativity"
+                    title="डिजाइन और रचनात्मकता MOOCs की सूची"
+                  >
+                    डिजाइन और रचनात्मकता
+                  </a>
+ </li>
+                              </ul>
+                          </li>    
+                      </ul><a href="../../subjects" class="btn-white btn-large margin-bottom-large">सभी विषयों को ब्राउज़ करें</a>
+
+ </section>
+    
+<footer class="sticky-footer bg-gray-xxlight">
+  <div class="width-page large-down-padding-horz-medium padding-vert-large border-box">
+    <div class="padding-bottom-medium margin-bottom-large border-bottom border-gray-mid row vert-align-middle">
+      <a href="../../index.html" class="flex">
+        <i class="icon-lettermark-charcoal icon-large">
+          <span class="off-page">होमपेज</span>
+        </i>
+      </a> 
+ <div class="text-2 margin-left-xxsmall inline-block">
+        <span class="text-3 color-gray padding-horz-xxsmall">/</span>        
+रिपोर्ट  
+ </div>
+    </div>
+    <nav class="row wrap xlarge-up-nowrap margin-bottom-medium">
+      <div class="row width-100 medium-up-width-4-5 xlarge-up-width-1-2">
+        <div class="width-100 large-up-width-1-3 border-box padding-right-medium margin-bottom-medium"><a href="../../subjects" class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline">विषय के आधार पर ब्राउज़ करें</a>
+
+ <ul class="list-no-style text-2">
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../subject/cs">कंप्यूटर विज्ञान</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/subject/psychology">मनोविज्ञान</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/subject/cybersecurity">साइबर सुरक्षा</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../subject/health">स्वास्थ्य</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/subject/law">कानून</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/subject/accounting">लेखांकन</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/subject/web-development">वेब विकास</a>
+ </li>
+                      </ul>
+        </div>
+        <div class="width-100 large-up-width-1-3 border-box padding-right-medium margin-bottom-medium"><a href="https://www.classcentral.com/providers" class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline">प्रदाता द्वारा ब्राउज़ करें</a>
+
+ <ul class="list-no-style text-2">
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/coursera">Coursera</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/edx">एडएक्स</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/futurelearn">FutureLearn</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/udacity">Udacity</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/swayam">स्वयं</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/udemy">Udemy</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/provider/linkedin-learning">लिंक्डइन लर्निंग</a>
+ </li>
+                      </ul>
+        </div>
+        <div class="width-100 large-up-width-1-3 border-box padding-right-medium margin-bottom-medium"><a href="../../universities" class="inline-block text-2 margin-bottom-xsmall color-charcoal weight-bold border-bottom border-gray hover-no-underline">विश्वविद्यालय द्वारा ब्राउज़ करें</a>
+
+ <ul class="list-no-style text-2">
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../university/harvard">हार्वर्ड</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../university/stanford">स्टैनफोर्ड</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../university/gatech">जॉर्जिया टेक</a>
+ </li>
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../../university/umich">मिशिगन विश्वविद्यालय</a>
+
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../university/purdue">पर्ड्यू विश्वविद्यालय</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../university/duke">ड्यूक विश्वविद्यालय</a>
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../../university/iitm">आईआईटी मद्रास</a>
+ </li>
+                      </ul> 
+        </div>
+      </div>
+      <div class="row width-100 medium-up-width-3-5 xlarge-up-width-1-2">
+        <div class="width-100 large-up-width-2-5 border-box padding-right-medium margin-bottom-medium"><a href="https://www.classcentral.com/institutions" class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline">संस्था द्वारा ब्राउज़ करें</a>
+
+ <ul class="list-no-style text-2">
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/google">Google</a>
+ </li>
+                            <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/microsoft">माइक्रोसॉफ़्ट</a>
+ </li>
+                            <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/ibm">आईबीएम</a>
+ </li>
+                            <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/amazon">अमेज़न</a>
+ </li>
+                            <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/linuxfoundation">लिनक्स फाउंडेशन</a>
+ </li>
+                            <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/british-council">ब्रिटिश काउंसिल</a>
+ </li>
+                            <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="https://www.classcentral.com/institution/salesforce">सेल्सफोर्स</a>
+ </li>
+                        </ul>
+        </div>
+        <div class="width-100 large-up-width-3-5 margin-bottom-small">
+          <a href="../../rankings" class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline">रैंकिंग</a>
+ <ul class="list-no-style text-2">
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../../collection/top-free-online-courses">सभी समय के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम</a>
+
+ </li>
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../best-free-online-courses-2022/index.html">वर्ष के सर्वश्रेष्ठ ऑनलाइन पाठ्यक्रम (2022 संस्करण)</a>
+
+ </li>
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../most-popular-online-courses/index.html">सभी समय के सबसे लोकप्रिय पाठ्यक्रम</a>
+
+ </li>
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../most-popular-courses-2022/index.html">वर्ष के सबसे लोकप्रिय पाठ्यक्रम (2022 संस्करण)</a>
+
+ </li>
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../coursera-top-courses/index.html">सभी समय के 250 शीर्ष मुफ्त कोर्सेरा पाठ्यक्रम</a>
+
+ </li>
+                          <li class="margin-vert-xxsmall">
+                <a class="color-charcoal" href="../edx-top-courses/index.html">100 सभी समय के शीर्ष मुफ्त edX पाठ्यक्रम</a>
+ </li>
+                          <li class="margin-vert-xxsmall"><a class="color-charcoal" href="../udemy-top-courses/index.html">सभी समय के 250 शीर्ष उदमी पाठ्यक्रम</a>
+
+ </li>
+                      </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row margin-bottom-large">
+      <div class="row width-100 xlarge-up-width-1-2 horz-align-left">
+        <div class="width-100 large-up-width-1-3 xlarge-up-width-1-2 border-box padding-right-medium margin-bottom-medium">
+          <a href="../index.html" class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline">
+            कक्षा केंद्रीय
+            
+          आरएसएस फ़ीड द्वारा            <i style="width: 80px; top: 3px;" class="relative inline-block symbol-report"></i>रिपोर्ट</a>          <a href="../feed/index.html" class="margin-left-xxsmall icon-center icon-small icon-rss-charcoal"></a>
+          
+ <ul class="row list-no-style text-2">
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  class="color-charcoal"
+                  href="../2022-year-in-review/index.html"
+                  title="&quot;नया सामान्य&quot; जो नहीं था"
+                >&quot;नया सामान्य&quot; जो नहीं था</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  class="color-charcoal"
+                  href="index.html"
+                  title="डीडीओएस पर हमला"
+                >डीडीओएस पर हमला</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box"><a
+                  class="color-charcoal"
+                  href="../india-online-degrees/index.html"
+                  title="भारत में 500+ ऑनलाइन डिग्री"
+                >भारत में 500+ ऑनलाइन डिग्री</a>
+
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  class="color-charcoal"
+                  href="../cs50-free-certificate/index.html"
+                  title="हार्वर्ड के CS50 नि: शुल्क प्रमाणपत्र गाइड"
+                >हार्वर्ड के CS50 नि: शुल्क प्रमाणपत्र गाइड</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box"><a
+                  class="color-charcoal"
+                  href="../open-university-insiders-perspective/index.html"
+                  title="Open University कैसे काम करता है"
+                >Open University कैसे काम करता है</a>
+
+ </li>
+                      </ul>
+        </div>
+        <div class="width-100 large-up-width-1-3 xlarge-up-width-1-2 border-box padding-right-medium margin-bottom-medium">
+          <a
+            data-track-click="footer_click"
+            data-track-props='{"type": "Quick Links", "title": "Free Courses and Certificates"}'
+            class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline"
+            href="../free-certificates/index.html"
+            title="नि: शुल्क पाठ्यक्रम और प्रमाण पत्र"
+          >नि: शुल्क पाठ्यक्रम और प्रमाण पत्र</a>
+ <ul class="row list-no-style text-2">
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  data-track-click="footer_click"
+                  data-track-props='{"type": "Quick Links", "title": "700+ Free Google Certificates"}'
+                  class="color-charcoal"
+                  href="../google-free-certificates/index.html"
+                  title="700+ निशुल्क Google प्रमाणपत्र"
+                >700+ निशुल्क Google प्रमाणपत्र</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  data-track-click="footer_click"
+                  data-track-props='{"type": "Quick Links", "title": "Free LinkedIn Learning Certificates"}'
+                  class="color-charcoal"
+                  href="../linkedin-learning-free-learning-paths/index.html"
+                  title="मुफ्त लिंक्डइन लर्निंग प्रमाण पत्र"
+                >मुफ्त लिंक्डइन लर्निंग प्रमाण पत्र</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  data-track-click="footer_click"
+                  data-track-props='{"type": "Quick Links", "title": "1700 Free Coursera Courses"}'
+                  class="color-charcoal"
+                  href="../coursera-free-online-courses/index.html"
+                  title="1700 नि: शुल्क पाठ्यक्रम"
+                >1700 नि: शुल्क पाठ्यक्रम</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  data-track-click="footer_click"
+                  data-track-props='{"type": "Quick Links", "title": "Ivy League Online Courses"}'
+                  class="color-charcoal"
+                  href="../../collection/ivy-league-moocs/index.html"
+                  title="आइवी लीग ऑनलाइन पाठ्यक्रम"
+                >आइवी लीग ऑनलाइन पाठ्यक्रम</a>
+ </li>
+                          <li class="width-100 margin-vert-xxsmall padding-right-xsmall border-box">
+                <a
+                  data-track-click="footer_click"
+                  data-track-props='{"type": "Quick Links", "title": "175+ Free Writing Online Courses"}'
+                  class="color-charcoal"
+                  href="../writing-free-online-courses/index.html"
+                  title="175+ नि: शुल्क लेखन ऑनलाइन पाठ्यक्रम"
+                >175+ नि: शुल्क लेखन ऑनलाइन पाठ्यक्रम</a>
+ </li>
+                      </ul>
+        </div>
+      </div>
+      <div class="row width-100 xlarge-up-width-1-2">
+        <div class="width-100 medium-up-width-3-5 margin-bottom-medium">|||UNTRANSLATED_CONTENT_START|||
+          <a href="../../about" class="inline-block margin-bottom-xxsmall text-2 color-charcoal weight-bold border-bottom border-gray hover-no-underline">About Class Central</a>
+          |||UNTRANSLATED_CONTENT_END|||<p class="text-2">कई प्रदाताओं से कक्षा केंद्रीय कुल पाठ्यक्रम आपको लगभग किसी भी विषय पर सर्वोत्तम पाठ्यक्रम खोजने में मदद करने के लिए, जहां भी वे मौजूद हैं। क्लास सेंट्रल<em class="italic"> की रिपोर्ट</em>, ऑनलाइन शिक्षा में नवीनतम समाचारों और रुझानों के लिए आपका स्रोत है।</p>
+          <ul class="margin-vert-medium list-no-style list-inline">
+                          <li class="margin-horz-xxsmall"><a rel="noopener" target="_blank" href="https://www.facebook.com/classcentral" class="icon-center icon-facebook-charcoal icon-medium">  </a>___ फेसबुक</li>
+                          <li class="margin-horz-xxsmall"><a rel="noopener" target="_blank" href="https://www.twitter.com/classcentral" class="icon-center icon-twitter-charcoal icon-medium">   </a>___  Twitter</li>
+                          <li class="margin-horz-xxsmall"><a rel="noopener" target="_blank" href="https://www.linkedin.com/company/classcentral" class="icon-center icon-linkedin-charcoal icon-medium">LinkedIn</a>
+ </li>
+                          <li class="margin-horz-xxsmall"><a rel="noopener" target="_blank" href="https://www.youtube.com/classcentral" class="icon-center icon-youtube-charcoal icon-medium">   </a>___  YouTube</li>
+                      </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="large-up-row vert-align-middle large-up-horz-align-left border-top border-gray-mid padding-top-medium">
+      <p>Class Central © 2011 -2023 <a href="https://www.classcentral.com/about/privacy-policy" class="color-charcoal block large-up-inline-block large-up-margin-left-xsmall">गोपनीयता नीति</a></p>
+      <ul class="list-no-style list-inline large-up-horz-align-right">
+                  <li class="block large-up-inline-block large-up-padding-horz-small"><a class="color-charcoal" href="../../about">हमारे बारे में</a>
+
+ </li>
+                  <li class="block large-up-inline-block large-up-padding-horz-small"><a class="color-charcoal" href="../../about/careers">हमसे जुड़ें</a>
+
+ </li>
+                  <li class="block large-up-inline-block large-up-padding-horz-small">|||UNTRANSLATED_CONTENT_START|||
+            <a class="color-charcoal" href="https://www.classcentral.com/help">Help Center</a>
+          |||UNTRANSLATED_CONTENT_END|||</li>
+                  <li class="block large-up-inline-block large-up-padding-horz-small">
+                            <a class="color-charcoal" href="../../contact">हमसे संपर्क करें</a>
+ </li>
+              </ul>
+    </div>
+  </div>
+</footer><script src="https://www.classcentral.com/analytics.js"></script>
+  <script type="text/javascript">
+    window.CC = { Class: {} };
+    window.CC.Class.Analytics = new window.Analytics({
+      url: "https://us-central1-class-central-prod.cloudfunctions.net/ub0tz0cmeh",
+      indexes: {"weekly":"2023_03_05","monthly":"2023_03"},
+      globalProps: {"page":"moocreport","deviceType":"desktop","created":"2023-03-07T19:11:23+00:00","referrer_info":{"referrer":"https:\/\/www.classcentral.com\/","source":null,"term":null,"medium":null},"user_agent":{"browser":{"family":"Yandex Browser","major":"22","minor":"7","patch":"0"},"os":{"family":"OS X","major":"12","minor":"5","patch":"","nickname":null},"device":{"type":"desktop","family":"Apple"}}}    });
+    CC.track = window.CC.Class.Analytics.track.bind(window.CC.Class.Analytics);
+    CC.track("pageview");
+  </script>
+<script>
+  window.TOUCHSCREEN = false;
+  window.addEventListener("touchstart", () => {
+    document.body.classList.add("touch");
+    window.TOUCHSCREEN = true;
+  });
+</script>
+<script deferred src="https://www.classcentral.com/report/wp-content/themes/wp-theme/dist/webpack/cc-main.8ec3ba12afa3aada2eb4.js"></script>
+<script type='text/javascript' id='ppress-frontend-script-js-extra'>
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/www.classcentral.com\/report\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"1328d4abb1","disable_ajax_form":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.classcentral.com/report/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=3.2.5' id='ppress-frontend-script-js'></script>
+<script type='text/javascript' src='https://www.classcentral.com/report/wp-includes/js/comment-reply.min.js?ver=5.8.2' id='comment-reply-js'></script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1678216283 -->
